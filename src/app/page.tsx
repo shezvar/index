@@ -26,10 +26,11 @@ export default function Home() {
           priority
         /> */}
 
+
         <div className="relative flex flex-col mx-auto max-w-3xl md:h-[95vh] h-[40rem] justify-center items-center px-8">
 
           <div className="flex flex-col gap-6 text-center">
-            <h1 className="text-4xl text-slate-800 dark:text-slate-100 font-header font-medium">Hello, I am Segun Oroyo</h1>
+            <h1 className="text-4xl text-slate-800 dark:text-slate-100 font-header font-medium">,Hello, I am Segun Oroyo</h1>
             <h4 className="text-slate-600 dark:text-slate-400 text-lg font-medium">Design enthusiast fueled by a passion for user-centricity and efficiency. Currently Product Design Lead at Fullgap to shape Project management lifecycle. Always eager to collaborate on projects with measurable positive impact.</h4>
             <div className="flex items-center mx-auto">
               <span className="relative flex h-3 w-3 mr-2">
