@@ -15,15 +15,6 @@
       "static/css/18584daf5ec1bf55.css",
       "static/chunks/app/layout-9f7d6286550dc852.js"
     ],
-    "/page": [
-      "static/chunks/webpack-d996f8b52c3996d2.js",
-      "static/chunks/4bd1b696-a44fda62d352aaf8.js",
-      "static/chunks/215-6280a3da82c6fc71.js",
-      "static/chunks/main-app-51e4d6b9c092b51e.js",
-      "static/chunks/291-97db346386fb5470.js",
-      "static/chunks/383-db5b540340a7fb5c.js",
-      "static/chunks/app/page-1a963e44a60f572a.js"
-    ],
     "/archive/page": [
       "static/chunks/webpack-d996f8b52c3996d2.js",
       "static/chunks/4bd1b696-a44fda62d352aaf8.js",
@@ -39,6 +30,15 @@
       "static/chunks/main-app-51e4d6b9c092b51e.js",
       "static/chunks/291-97db346386fb5470.js",
       "static/chunks/app/projects/century-onboarding/page-d40075d614d8b7d0.js"
+    ],
+    "/page": [
+      "static/chunks/webpack-d996f8b52c3996d2.js",
+      "static/chunks/4bd1b696-a44fda62d352aaf8.js",
+      "static/chunks/215-6280a3da82c6fc71.js",
+      "static/chunks/main-app-51e4d6b9c092b51e.js",
+      "static/chunks/291-97db346386fb5470.js",
+      "static/chunks/383-db5b540340a7fb5c.js",
+      "static/chunks/app/page-1a963e44a60f572a.js"
     ]
   }
 }
