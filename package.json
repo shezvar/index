@@ -1,13 +1,16 @@
 {
+  "homepage": "https://shezvar.github.io/index", 
+
   "name": "segunoroyo",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export && mv out/* docs && cp out/404.html docs/404.html",
     "start": "next start",
     "lint": "next lint"
   },
+
   "dependencies": {
     "lucide-react": "^0.454.0",
     "next": "15.0.2",
@@ -27,3 +30,4 @@
     "typescript": "^5"
   }
 }
+
