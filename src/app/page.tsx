@@ -51,6 +51,7 @@ export default function Home() {
             <div className="grid lg:grid-cols-2 gap-24">
               {projectData.map((item) => (
                   <ProjectsCardHome
+                    key={item.title} // Add the key prop here
                     image={item.image}
                     type={item.type}
                     title={item.title}

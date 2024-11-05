@@ -1,5 +1,4 @@
 "use client"
-import Image from "next/image";
 import { HeaderMain } from "@/components/header";
 
 export default function CenturyTech() {

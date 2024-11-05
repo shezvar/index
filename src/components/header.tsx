@@ -1,6 +1,6 @@
 'use client'
-import { useState } from 'react'
-import Image from 'next/image'
+// import { useState } from 'react'
+// import Image from 'next/image'
 import Link from 'next/link' // Import the Link component
 import { usePathname } from 'next/navigation'; // Import usePathname
 

@@ -1,10 +1,10 @@
-import { useState } from "react";
+// import { useState } from "react";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
 
 export function ProjectsCardHome(props:{image:string, type:string, title:string, description:string, link:string, bgColor:string}) {
-    const {image, type, title, description, link, bgColor} = props;
+    const {image, title, description, link, bgColor} = props;
     return (
         <div className="lg:even:mt-24">
             <div className="w-full">
