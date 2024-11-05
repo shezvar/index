@@ -1,10 +1,10 @@
-// import type { NextConfig } from "next";
+import type { NextConfig } from "next";
 
-// const nextConfig: NextConfig = {
-//   /* config options here */
-// };
+const nextConfig: NextConfig = {
+  /* config options here */
+};
 
-// export default nextConfig;
+export default nextConfig;
 
 
 
@@ -22,11 +22,11 @@
 
 // module.exports = nextConfig;
 
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  basePath: "/index",
-  output: "export",  // <=== enables static exports
-  reactStrictMode: true,
-};
+// /** @type {import('next').NextConfig} */
+// const nextConfig = {
+//   basePath: "/index",
+//   output: "export",  // <=== enables static exports
+//   reactStrictMode: true,
+// };
 
-module.exports = nextConfig;
+// module.exports = nextConfig;
