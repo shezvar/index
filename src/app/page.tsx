@@ -1,118 +1,260 @@
-'use client'
+/* eslint-disable react/no-unescaped-entities */
+import React from "react";
+import { Card } from "@/components/card";
+import { ProjectItem } from "@/components/portfolioCard";
+import {
+  WandSparkles,
+  BriefcaseBusiness,
+  Puzzle,
+  Users,
+} from "lucide-react";
 import Image from "next/image";
-import { HeaderMain } from "@/components/header"
-import { ArrowDown } from "lucide-react";
-import { ProjectsCardHome } from "@/components/projectCards";
+import { Divider } from "@/components/divider";
+import { BgPattern } from "@/components/bgPattern";
+import { ToolsCard } from "@/components/toolsLogo";
+import { FooterCTA } from "@/components/footerCTA";
+import portfolioData from "@/app/data/project.json";
 
-const projectData = [
-  { image: '/testimage.webp', type: 'Case study', title: 'Mailchimp Mobile Homepage Redesign', description: 'Surfacing the most relevant information for mobile users', link: '/century-onboarding', bgColor: 'pink-200'},
-  { image: '/testimage2.webp', type: 'Case study', title: 'Mailchimp Mobile Homepage Redesign', description: 'Surfacing the most relevant information for mobile users', link: '/century-onboarding', bgColor: 'white'},
-  { image: '', type: 'Case study', title: 'Mailchimp Mobile Homepage Redesign', description: 'Surfacing the most relevant information for mobile users', link: '/century-onboarding', bgColor: 'blue-200'},
-  { image: '', type: 'Case study', title: 'Mailchimp Mobile Homepage Redesign', description: 'Surfacing the most relevant information for mobile users', link: '/century-onboarding', bgColor: 'yellow-200'},
-  { image: '', type: 'Case study', title: 'Mailchimp Mobile Homepage Redesign', description: 'Surfacing the most relevant information for mobile users', link: '/century-onboarding', bgColor: 'amber-200'},
-]
+const toolsLogoData = [
+  {
+    src: "/assets/figma-icon.svg",
+    alt: "Figma Icon",
+  },
+  {
+    src: "/assets/figma-icon.svg",
+    alt: "Figma Icon",
+  },
+  {
+    src: "/assets/figma-icon.svg",
+    alt: "Figma Icon",
+  },
+  {
+    src: "/assets/figma-icon.svg",
+    alt: "Figma Icon",
+  },
+  {
+    src: "/assets/figma-icon.svg",
+    alt: "Figma Icon",
+  },
+  {
+    src: "/assets/figma-icon.svg",
+    alt: "Figma Icon",
+  },
+  {
+    src: "/assets/figma-icon.svg",
+    alt: "Figma Icon",
+  },
+  {
+    src: "/assets/figma-icon.svg",
+    alt: "Figma Icon",
+  },
+  {
+    src: "/assets/figma-icon.svg",
+    alt: "Figma Icon",
+  },
+];
 
-export default function Home() {
+
+export default async function Home() {
+  
   return (
-    <div className="bg-white dark:bg-black">
-      <HeaderMain />
-      <main className="relative">
-        {/* <Image
-          className="dark:invert w-24 h-auto"
-          src="/segun.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        /> */}
+    <div className="min-h-screen flex flex-col w-full">
+      <main className="flex w-full flex-col flex-nowrap gap-0 relative p-0 justify-center min-h-0">
+        {/* HERO SECTION */}
 
+        <section
+          className="py-10 w-full border-x border-stone-200 max-w-6xl mx-auto relative"
+          id="hero"
+        ></section>
 
-        <div className="relative flex flex-col mx-auto max-w-3xl md:h-[95vh] h-[40rem] justify-center items-center px-8">
+        <section className="border-x border-stone-200 w-full px-3 py-16 flex flex-col gap-0 h-min items-center justify-center max-w-6xl mx-auto relative group/sideCard">
+          <div className="flex relative items-baseline">
+            <Card
+              variant="default"
+              padding="none"
+              className="flex flex-row justify-start p-1 shadow-xl bg-white/30 backdrop-blur-md border border-white/20 -rotate-6 absolute -left-3 bottom-0 group-hover/sideCard:-rotate-12 transition-transform duration-300 ease-in-out"
+            >
+              <div className="rounded-xl overflow-hidden flex items-center justify-center bg-stone-950 size-32">
+                <Image
+                  src="/assets/hero-image.png"
+                  alt="Segun Oroyo"
+                  width={400}
+                  height={400}
+                  className="rounded-full object-cover ml-auto"
+                />
+              </div>
+            </Card>
 
-          <div className="flex flex-col gap-6 text-center">
-            <h1 className="text-4xl text-slate-800 dark:text-slate-100 font-header font-medium">Hello, I am Segun Oroyo</h1>
-            <h4 className="text-slate-600 dark:text-slate-400 text-lg font-medium">Design enthusiast fueled by a passion for user-centricity and efficiency. Currently Product Design Lead at Fullgap to shape Project management lifecycle. Always eager to collaborate on projects with measurable positive impact.</h4>
-            <div className="flex items-center mx-auto">
-              <span className="relative flex h-3 w-3 mr-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
-              </span>
-              <span className="text-slate-600 dark:text-slate-400 text-sm font-semibold">BASED IN LONDON, UK</span>
+            <Card
+              variant="default"
+              padding="none"
+              className="flex flex-row justify-start relative p-2 rotate-0 shadow-xl z-[1] bg-white/30 backdrop-blur-md border border-white/20"
+            >
+              <div className="rounded-xl overflow-hidden flex items-center justify-center bg-stone-950 size-40">
+                <Image
+                  src="/assets/hero-image.png"
+                  alt="Segun Oroyo"
+                  width={400}
+                  height={400}
+                  className="rounded-full object-cover ml-auto"
+                />
+              </div>
+            </Card>
+
+            <Card
+              variant="default"
+              padding="none"
+              className="flex flex-row justify-start  p-1 shadow-xl bg-white/30 backdrop-blur-md border border-white/20 rotate-6 absolute -right-3 bottom-0 group-hover/sideCard:rotate-12 transition-transform duration-300 ease-in-out"
+            >
+              <div className="rounded-xl overflow-hidden flex items-center justify-center bg-stone-950 size-32">
+                <Image
+                  src="/assets/hero-image.png"
+                  alt="Segun Oroyo"
+                  width={400}
+                  height={400}
+                  className="rounded-full object-cover ml-auto"
+                />
+              </div>
+            </Card>
+          </div>
+
+          <div className="text-center max-w-2xl mt-12">
+            <h2 className="text-3xl md:text-5xl font-thin text-stone-900 leading-tight">
+              Hey, I&apos;m Segun Oroyo
+            </h2>
+            <p className="text-stone-700 text-lg mt-6">
+              Product Designer (UI/UX) with 7+ years of experience in end-to-end
+              experiences for both business and consumer applications.
+            </p>
+          </div>
+        </section>
+
+        <Divider />
+
+        <section className="border-x border-y border-stone-200 w-full px-6 md:px-16 py-16 flex flex-row gap-0 h-min justify-center max-w-6xl mx-auto relative">
+          <BgPattern />
+          <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 items-stretch relative">
+            <div className="h-full flex">
+              <Card
+                variant="default"
+                padding="md"
+                className="w-full flex flex-row relative h-full"
+              >
+                <div className="flex flex-col w-full">
+                  <WandSparkles className="size-6 mb-4" />
+                  <h4 className="text-base">
+                    A generalist that builds using AI
+                  </h4>
+                </div>
+              </Card>
+            </div>
+            <div className="h-full flex">
+              <Card
+                variant="default"
+                padding="md"
+                className="w-full flex flex-row relative h-full"
+              >
+                <div className="flex flex-col w-full">
+                  <BriefcaseBusiness className="size-6 mb-4" />
+                  <h4 className="text-base">
+                    Available for remote or hybrid role
+                  </h4>
+                </div>
+              </Card>
+            </div>
+            <div className="h-full flex">
+              <Card
+                variant="default"
+                padding="md"
+                className="w-full flex flex-row relative h-full"
+              >
+                <div className="flex flex-col w-full">
+                  <Puzzle className="size-6 mb-4" />
+                  <h4 className="text-base">
+                    An individual contributor and a team player
+                  </h4>
+                </div>
+              </Card>
+            </div>
+            <div className="h-full flex">
+              <Card
+                variant="default"
+                padding="md"
+                className="w-full flex flex-row relative h-full"
+              >
+                <div className="flex flex-col w-full">
+                  <Users className="size-6 mb-4" />
+                  <h4 className="text-base">
+                    Experienced in leading a product team
+                  </h4>
+                </div>
+              </Card>
             </div>
           </div>
+        </section>
 
-          <div className="absolute bottom-[2rem]">
-            <svg className="animate-bounce w-6 h-6"><ArrowDown className="stroke-slate-600 dark:stroke-slate-400"/></svg>
-          </div>
-          
-        </div>
+        <Divider />
 
-        <div className="relative px-8 py-12">
-          <div className="mx-auto max-w-5xl">
-            <div className="grid lg:grid-cols-2 gap-24">
-              {projectData.map((item) => (
-                  <ProjectsCardHome
-                    key={item.title} // Add the key prop here
-                    image={item.image}
-                    type={item.type}
-                    title={item.title}
-                    description={item.description}
-                    link={item.link}
-                    bgColor={item.bgColor}
-                  />
-                ))}
+        <section className="border-x border-stone-200 w-full px-6 md:px-16 py-16 flex flex-row gap-0 h-min justify-center max-w-6xl mx-auto relative">
+          <div className="w-full flex flex-col relative">
+            <div className="max-w-3xl flex flex-col gap-2 mb-8">
+              <h2 className="text-3xl md:text-4xl font-thin text-stone-400">
+                These are some{" "}
+                <span className="text-stone-900">
+                  projects I&apos;ve worked on
+                </span>{" "}
+                trying to put my dent in the universe
+              </h2>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              {portfolioData.slice(0, 4).map((item, idx) => (
+                <ProjectItem
+                  key={item.title || idx}
+                  image={item.src}
+                  type={item.type || ''}
+                  title={item.title || ''}
+                  description={item.description || ''}
+                  link={item.link || ''}
+                  highlightWord={item.highlightWord}
+                />
+              ))}
             </div>
           </div>
-        </div>
+        </section>
 
+        <Divider />
+
+        <section className="border-x border-y border-stone-200 w-full px-6 md:px-16 py-0 flex flex-row gap-0 h-min justify-center max-w-6xl mx-auto relative">
+          <BgPattern />
+          <div className="z-[1] bg-main w-full max-w-6xl mx-auto px-6 md:px-16 py-16 border-x">
+            <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-8 z-[1]">
+              {/* Left: Content */}
+              <div className="flex flex-col justify-center flex-1 min-w-0">
+                <h2 className="text-3xl md:text-4xl font-thin text-stone-400">
+                  A toolkit of essential resources that help me{" "}
+                  <span className="text-stone-900">work efficiently</span> and
+                  produce outstanding results.
+                </h2>
+              </div>
+
+              {/* Right: Icon grid */}
+              <div className="flex-1 flex items-center justify-center md:ml-auto">
+                <div className="grid grid-cols-3 grid-rows-2 gap-10 overflow-hidden">
+                  <ToolsCard icons={toolsLogoData} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <Divider />
+
+        {/* CALL TO ACTION SECTION */}
+        <FooterCTA />
+        <Divider />
       </main>
-      <footer className="hidden row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
     </div>
   );
 }

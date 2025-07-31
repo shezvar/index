@@ -1,18 +1,13 @@
 import type { Metadata } from "next";
-import { Open_Sans, Montserrat } from "next/font/google";
-import PrelineScript from "@/components/PrelineScript";
+import { Manrope } from "next/font/google";
 import "./globals.css";
+import { Footer } from "@/components/footer";
+import { HeaderMain } from "@/components/header";
 
-const montserrat = Montserrat({ 
+const manrope = Manrope({
   subsets: ['latin'],
-  weight: ['400', '700'], // Add more weights if needed
-  variable: '--font-montserrat' 
-});
-
-const openSans = Open_Sans({ 
-  subsets: ['latin'],
-  weight: ['400', '700'], // Add more weights if needed
-  variable: '--font-open-sans' 
+  weight: ['400', '500', '600', '700', '800'], // Add more weights if needed
+  variable: '--font-manrope'
 });
 
 export const metadata: Metadata = {
@@ -26,11 +21,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${montserrat.variable} ${openSans.variable} antialiased box-border`}>
-          <div className={`${openSans.className} `}>{children}</div> {/* Apply Open Sans to the main content area */}
-        <PrelineScript />
+    <html lang="en" cz-shortcut-listen="true">
+      <body className={`${manrope.variable} relative antialiased box-border bg-main`}>
+        {/* HEADER */}
+        <HeaderMain />
+        {/* MAIN CONTENT */}
+        <main className="flex-1 w-full flex flex-col items-center justify-center mx-auto px-0 min-h-[70vh]">
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   );

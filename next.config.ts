@@ -1,12 +1,19 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  images: {
+    remotePatterns: [
+      {
+        protocol: "http",
+        hostname: "localhost",
+        port: "8888",
+        pathname: "/wordpress-backend/**",
+      },
+    ],
+  },
 };
 
 export default nextConfig;
-
-
 
 // const isGithubActions = process.env.GITHUB_ACTIONS || false;
 

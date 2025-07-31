@@ -4,22 +4,20 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
- 
-    // Or if using `src` directory:
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
-
-    "./node_modules/preline/preline.js",
   ],
   theme: {
     extend: {
       fontFamily: {
         header: ['Montserrat', 'sans-serif'], // Add Montserrat here
       },
+      colors: {
+        main: '#f4f4f4', // Example primary color
+      },
     },
   },
   plugins: [
-    require('preline/plugin'),
-    require("tailwindcss"),
-    require("autoprefixer"),
+    import("tailwindcss"),
+    import("autoprefixer"),
   ],
 }

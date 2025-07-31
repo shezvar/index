@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "src": "/assets/fullgap/fg-cover.png",
+    "alt": "FullGap Cover",
+    "type": "Case Study",
+    "title": "Driving Creative UX in Product Management",
+    "description": "Fullgap’s new digital experience is seamless, personalised, and designed to align with consultants and small teams who continually embrace the future.",
+    "link": "/projects/fullgap",
+    "highlightWord": "Product Management",
+    "tags": ["Project Management", "Invoicing", "Contract Management"]
+  },
+  {
+    "id": 2,
+    "src": "/assets/prowoks/pw-cover.png",
+    "alt": "Prowoks Cover",
+    "type": "Case Study",
+    "title": "Automated Budget System In State Governance Sector",
+    "description": "This intelligent budgeting system empowers government ministries to manage resources efficiently while supporting transparency, compliance, and data-driven decision-making for both new and experienced public administrators.",
+    "link": "/projects/prowoks",
+    "highlightWord": "State Governance",
+    "tags": ["Budget Management", "Workflow", "Reconciliation"]
+  },
+  {
+    "id": 3,
+    "src": "/assets/fg-cover-3.png",
+    "alt": "Figma Icon",
+    "type": "Figma",
+    "title": "Empowering Mexicans with Novel Digital Banking",
+    "description": "The first digital bank by Banorte for Mexico offers a next-gen UX/UI, hyper-personalization, unwavering support, and user guidance toward informed financial decisions and goals.",
+    "link": "/projects/fullgap",
+    "highlightWord": "Digital Banking",
+    "tags": ["Project Management", "Invoicing", "Contract Management"]
+  },
+  {
+    "id": 4,
+    "src": "/assets/fg-cover-4.png",
+    "alt": "Figma Icon",
+    "type": "Figma",
+    "title": "Turning Liv Bank into Spatial Banking Experience",
+    "description": "Real life example how Liv Bank could work in a spatial environment. Prototype was showcased in the Dubai Fintech Summit with 3 use case scenarios and was received with much amazement and excitement.",
+    "link": "/projects/fullgap",
+    "highlightWord": "Spatial Banking",
+    "tags": ["Project Management", "Invoicing", "Contract Management"]
+  },
+  {
+    "id": 5,
+    "src": "/assets/fg-cover-2.png",
+    "alt": "Figma Icon",
+    "type": "Figma",
+    "title": "Envisioning Conversational Banking in the Style of ChatGPT",
+    "description": "Garanti BBVA's Securities eTrader mobile app empowers new users to master financial markets while catering to the needs of experienced traders.",
+    "link": "/projects/fullgap",
+    "highlightWord": "Conversational Banking",
+    "tags": ["Project Management", "Invoicing", "Contract Management"]
+  }
+]
