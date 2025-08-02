@@ -17,40 +17,24 @@ import portfolioData from "@/app/data/project.json";
 
 const toolsLogoData = [
   {
-    src: "/assets/figma-icon.svg",
+    src: "/assets/tools/figma-icon.svg",
     alt: "Figma Icon",
+    text: "Figma",
   },
   {
-    src: "/assets/figma-icon.svg",
+    src: "/assets/tools/chatgpt-6.svg",
     alt: "Figma Icon",
+    text: "ChatGPT",
   },
   {
-    src: "/assets/figma-icon.svg",
+    src: "/assets/tools/gemini-icon.svg",
     alt: "Figma Icon",
+    text: "Gemini",
   },
   {
-    src: "/assets/figma-icon.svg",
+    src: "/assets/tools/cursor-icon.svg",
     alt: "Figma Icon",
-  },
-  {
-    src: "/assets/figma-icon.svg",
-    alt: "Figma Icon",
-  },
-  {
-    src: "/assets/figma-icon.svg",
-    alt: "Figma Icon",
-  },
-  {
-    src: "/assets/figma-icon.svg",
-    alt: "Figma Icon",
-  },
-  {
-    src: "/assets/figma-icon.svg",
-    alt: "Figma Icon",
-  },
-  {
-    src: "/assets/figma-icon.svg",
-    alt: "Figma Icon",
+    text: "Cursor",
   },
 ];
 
@@ -240,8 +224,11 @@ export default async function Home() {
 
               {/* Right: Icon grid */}
               <div className="flex-1 flex items-center justify-center md:ml-auto">
-                <div className="grid grid-cols-3 grid-rows-2 gap-10 overflow-hidden">
-                  <ToolsCard icons={toolsLogoData} />
+                <div className="grid grid-cols-2 grid-rows-2 gap-6 overflow-hidden">
+                  <ToolsCard icons={toolsLogoData.map(icon => ({
+                    ...icon,
+                    text: icon.text || ''
+                  }))} />
                 </div>
               </div>
             </div>
