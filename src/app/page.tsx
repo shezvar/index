@@ -192,7 +192,9 @@ export default async function Home() {
             </div>
 
             <div className="grid md:grid-cols-2 gap-8">
-              {portfolioData.slice(0, 4).map((item, idx) => (
+              {portfolioData
+                .filter(item => [1, 2].includes(item.id))
+                .map((item, idx) => (
                 <ProjectItem
                   key={item.title || idx}
                   image={item.src}
