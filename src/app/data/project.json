@@ -2,7 +2,7 @@
   {
     "id": 1,
     "src": "/assets/fullgap/fg-cover.png",
-    "alt": "FullGap Cover",
+    "alt": "FullGap",
     "type": "Case Study",
     "title": "Driving Creative UX in Product Management",
     "description": "Fullgap’s new digital experience is seamless, personalised, and designed to align with consultants and small teams who continually embrace the future.",
@@ -13,7 +13,7 @@
   {
     "id": 2,
     "src": "/assets/prowoks/pw-cover.png",
-    "alt": "Prowoks Cover",
+    "alt": "Prowoks",
     "type": "Case Study",
     "title": "From Chaos to Clarity: Reimagining Nigeria’s State Budget System",
     "description": "How a human-centered enterprise platform transformed budget governance in 3+ Nigerian states",
@@ -24,7 +24,7 @@
   {
     "id": 3,
     "src": "/assets/prowoks/pw-cover.png",
-    "alt": "iPOS Cover",
+    "alt": "iPOS",
     "type": "Case Study",
     "title": "A Sample From iPOS Just To Fill Space To Be Replace With The Real Content Later",
     "description": "How a human-centered enterprise platform transformed budget governance in 3+ Nigerian states",

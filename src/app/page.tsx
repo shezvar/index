@@ -7,6 +7,7 @@ import {
   BriefcaseBusiness,
   Puzzle,
   Users,
+  Brain,
 } from "lucide-react";
 import Image from "next/image";
 import { Divider } from "@/components/divider";
@@ -17,24 +18,34 @@ import portfolioData from "@/app/data/project.json";
 
 const toolsLogoData = [
   {
+    src: "/assets/tools/chatgpt-6.svg",
+    alt: "ChatGPT Icon",
+    text: "ChatGPT",
+  },
+  {
     src: "/assets/tools/figma-icon.svg",
     alt: "Figma Icon",
     text: "Figma",
   },
   {
-    src: "/assets/tools/chatgpt-6.svg",
-    alt: "Figma Icon",
-    text: "ChatGPT",
+    src: "/assets/tools/lovable-logo-icon.svg",
+    alt: "Lovable Icon",
+    text: "Lovable",
   },
   {
     src: "/assets/tools/gemini-icon.svg",
-    alt: "Figma Icon",
+    alt: "Gemini Icon",
     text: "Gemini",
   },
   {
     src: "/assets/tools/cursor-icon.svg",
-    alt: "Figma Icon",
+    alt: "Cursor Icon",
     text: "Cursor",
+  },
+  {
+    Icon: Brain,
+    alt: "Brain Icon",
+    text: "Thought",
   },
 ];
 
@@ -126,9 +137,9 @@ export default async function Home() {
               >
                 <div className="flex flex-col w-full">
                   <WandSparkles className="size-6 mb-4" />
-                  <h4 className="text-base">
+                  <span className="text-base">
                     A generalist that builds using AI
-                  </h4>
+                  </span>
                 </div>
               </Card>
             </div>
@@ -140,9 +151,9 @@ export default async function Home() {
               >
                 <div className="flex flex-col w-full">
                   <BriefcaseBusiness className="size-6 mb-4" />
-                  <h4 className="text-base">
+                  <span className="text-base">
                     Available for remote or hybrid role
-                  </h4>
+                  </span>
                 </div>
               </Card>
             </div>
@@ -154,9 +165,9 @@ export default async function Home() {
               >
                 <div className="flex flex-col w-full">
                   <Puzzle className="size-6 mb-4" />
-                  <h4 className="text-base">
+                  <span className="text-base">
                     An individual contributor and a team player
-                  </h4>
+                  </span>
                 </div>
               </Card>
             </div>
@@ -168,9 +179,9 @@ export default async function Home() {
               >
                 <div className="flex flex-col w-full">
                   <Users className="size-6 mb-4" />
-                  <h4 className="text-base">
+                  <span className="text-base">
                     Experienced in leading a product team
-                  </h4>
+                  </span>
                 </div>
               </Card>
             </div>
@@ -191,7 +202,7 @@ export default async function Home() {
               </h2>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-2 gap-8 h-full">
               {portfolioData
                 .filter(item => [1, 2].includes(item.id))
                 .map((item, idx) => (
@@ -214,11 +225,11 @@ export default async function Home() {
         <section className="border-x border-y border-stone-200 w-full px-6 md:px-16 py-0 flex flex-row gap-0 h-min justify-center max-w-6xl mx-auto relative">
           <BgPattern />
           <div className="z-[1] bg-main w-full max-w-6xl mx-auto px-6 md:px-16 py-16 border-x">
-            <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-8 z-[1]">
+            <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-8 z-[1]">
               {/* Left: Content */}
               <div className="flex flex-col justify-center flex-1 min-w-0">
                 <h2 className="text-3xl md:text-4xl font-thin text-stone-400">
-                  A toolkit of essential resources that help me{" "}
+                  Some of the essential resources that help me{" "}
                   <span className="text-stone-900">work efficiently</span> and
                   produce outstanding results.
                 </h2>
@@ -226,7 +237,7 @@ export default async function Home() {
 
               {/* Right: Icon grid */}
               <div className="flex-1 flex items-center justify-center md:ml-auto">
-                <div className="grid grid-cols-2 grid-rows-2 gap-6 overflow-hidden">
+                <div className="flex flex-wrap justify-start items-center gap-4 overflow-hidden">
                   <ToolsCard icons={toolsLogoData.map(icon => ({
                     ...icon,
                     text: icon.text || ''

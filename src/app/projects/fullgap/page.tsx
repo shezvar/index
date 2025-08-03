@@ -91,7 +91,7 @@ export default function FullGap() {
         {/* Engaging Overview */}
         <section className="border-x border-stone-200 w-full px-6 lg:px-56 pt-16 pb-12 flex flex-row gap-0 h-min justify-center max-w-6xl mx-auto relative">
           <div className="w-full flex flex-row justify-start relative">
-            <div className="flex flex-col blog-post">
+            <div className="flex flex-col">
               <h4>Overview</h4>
               <p>
                 <strong>Designing for impact, not just aesthetics.</strong> Fullgap is more than a product—it&apos;s a vision to liberate freelancers and businesses from the constraints of generic, uninspired project management tools. I led the transformation of Fullgap into a platform that empowers independent professionals and teams to work with agility, creativity, and joy.
@@ -111,7 +111,7 @@ export default function FullGap() {
         {/* Challenges */}
         <section className="border-x border-stone-200 w-full px-6 lg:px-56 pt-16 pb-12 flex flex-row gap-0 h-min justify-center max-w-6xl mx-auto relative">
           <div className="w-full flex flex-row justify-start relative">
-            <div className="flex flex-col blog-post">
+            <div className="flex flex-col">
               <h4>Challenges</h4>
               <p>
                 <strong>The real challenge:</strong> A <strong>frustrating, multi-step project creation process</strong> that left users feeling boxed in and disengaged. Every unnecessary click was a barrier to creativity and productivity.
@@ -128,7 +128,7 @@ export default function FullGap() {
         {/* Research and Insights */}
         <section className="border-x border-stone-200 w-full px-6 lg:px-56 pt-16 pb-12 flex flex-row gap-0 h-min justify-center max-w-6xl mx-auto relative">
           <div className="w-full flex flex-row justify-start relative">
-            <div className="flex flex-col blog-post">
+            <div className="flex flex-col">
               <h4>Research & Insights</h4>
               <p>
                 <strong>Empathy-driven design starts with listening.</strong> I conducted in-depth <strong>user interviews</strong> and <strong>SUS questionnaires</strong> to get to the heart of what users truly need. Here&lsquo;s what surfaced:
@@ -158,7 +158,7 @@ export default function FullGap() {
         {/* Solutions */}
         <section className="border-x border-stone-200 w-full px-6 lg:px-56 pt-16 pb-12 flex flex-row gap-0 h-min justify-center max-w-6xl mx-auto relative">
           <div className="w-full flex flex-row justify-start relative">
-            <div className="flex flex-col blog-post">
+            <div className="flex flex-col">
               <h4>Solutions</h4>
               <p>
                 Fullgap was transformed into a highly flexible and modular
@@ -175,7 +175,7 @@ export default function FullGap() {
         {/* Project Management */}
         <section className="border-x border-y border-stone-200 w-full px-6 lg:px-56 py-16 flex flex-row gap-0 h-min justify-center max-w-6xl mx-auto relative">
           <div className="flex flex-col gap-6 w-full">
-            <div className="flex flex-col blog-post">
+            <div className="flex flex-col">
               <strong className="mb-4 block">1. Project Management: Simplicity Meets Power</strong>
               <ul className="list-disc pl-6 *:mb-3">
                 <li>
@@ -213,7 +213,7 @@ export default function FullGap() {
         {/* Invoice Management */}
         <section className="border-x border-y border-stone-200 w-full px-6 lg:px-56 py-16 flex flex-row gap-0 h-min justify-center max-w-6xl mx-auto relative">
           <div className="flex flex-col gap-6 w-full">
-            <div className="flex flex-col blog-post">
+            <div className="flex flex-col">
               <strong className="mb-4 block">2. Invoice Management: Clarity & Control</strong>
               <ul className="list-disc pl-6 *:mb-3">
                 <li>
@@ -245,9 +245,9 @@ export default function FullGap() {
         </section>
 
         {/* Contract Management */}
-        <section className="border-x border-y border-stone-200 w-full px-6 lg:px-56 py-16 flex flex-row gap-0 h-min justify-center max-w-6xl mx-auto relative">
+        <section className="border-x border-b border-stone-200 w-full px-6 lg:px-56 py-16 flex flex-row gap-0 h-min justify-center max-w-6xl mx-auto relative">
           <div className="flex flex-col gap-6 w-full">
-            <div className="flex flex-col blog-post">
+            <div className="flex flex-col">
               <strong className="mb-4 block">3. Contract Management: Empowerment & Flexibility</strong>
               <ul className="list-disc pl-6 *:mb-3">
                 <li>

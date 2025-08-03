@@ -26,45 +26,40 @@ body {
 /* scrolled-past-hero {
   background-color: #171717;
 } */
-
-.blog-post p {
-  margin-bottom: 1.5rem;
-  font-size: 1rem /* 18px */;
-  line-height: 1.75rem /* 28px */;
-  --tw-text-opacity: 1;
-  color: rgb(87 83 78 / var(--tw-text-opacity, 1))
-}
-
-.blog-post h4 {
+section h4 {
   margin-bottom: 1rem;
   font-size: 1.5rem /* 24px */;
   line-height: 1.75rem;
   font-weight: 700;
   --tw-text-opacity: 1;
-  color: rgb(21 23 26 / var(--tw-text-opacity, 1));
 }
 
-.blog-post h5 {
+section p {
+  margin-bottom: 1.5rem;
+  font-size: 1rem /* 18px */;
+  line-height: 1.75rem /* 28px */;
+  --tw-text-opacity: 1;
+}
+
+section h5 {
   margin-bottom: 1.2rem;
   font-size: 1.4rem /* 22px */;
   line-height: 1.75rem;
   font-weight: 700;
   --tw-text-opacity: 1;
-  color: rgb(21 23 26 / var(--tw-text-opacity, 1));
 }
 
-.blog-post ul li {
+section ul li {
   margin-bottom: .5rem;
   line-height: 1.75rem;
   --tw-text-opacity: 1;
-  color: rgb(87 83 78 / var(--tw-text-opacity, 1))
 }
 
-.blog-post ul li span {
+section ul li span {
   line-height: 1.75rem;
   --tw-text-opacity: 1;
-  color: rgb(21 23 26 / var(--tw-text-opacity, 1));
 }
+  
 
 /* Make mobile nav full screen when open */
 /* #hs-navbar-header-floating.hs-collapse {

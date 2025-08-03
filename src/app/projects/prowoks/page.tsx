@@ -100,9 +100,9 @@ export default function FullGap() {
               >
                 <div className="flex flex-col w-full">
                   <BriefcaseBusiness className="size-6 mb-4" />
-                  <h4 className="text-base">
+                  <span className="text-base">
                   <strong>Role:</strong> Research, IA, and Design
-                  </h4>
+                  </span>
                 </div>
               </Card>
             </div>
@@ -114,9 +114,9 @@ export default function FullGap() {
               >
                 <div className="flex flex-col w-full">
                   <MonitorSmartphone className="size-6 mb-4" />
-                  <h4 className="text-base">
+                  <span className="text-base">
                     <strong>Platform Design:</strong> Desktop & Mobile Responsive
-                  </h4>
+                  </span>
                 </div>
               </Card>
             </div>
@@ -128,9 +128,9 @@ export default function FullGap() {
               >
                 <div className="flex flex-col w-full">
                   <Calendar className="size-6 mb-4" />
-                  <h4 className="text-base">
+                  <span className="text-base">
                     <strong>Durations:</strong> 5½ weeks across two pilot states
-                  </h4>
+                  </span>
                 </div>
               </Card>
             </div>
@@ -142,9 +142,9 @@ export default function FullGap() {
               >
                 <div className="flex flex-col w-full">
                   <Users className="size-6 mb-4" />
-                  <h4 className="text-base">
+                  <span className="text-base">
                     <strong>Participants:</strong> 53 civil servants from 23 ministries
-                  </h4>
+                  </span>
                 </div>
               </Card>
             </div>
@@ -153,7 +153,7 @@ export default function FullGap() {
 
         <section className=" border-x border-stone-200 w-full px-6 lg:px-56 pt-16 pb-12 flex flex-row gap-0 h-min justify-center max-w-6xl mx-auto relative">
           <div className="w-full flex flex-row justify-start relative">
-            <div className="flex flex-col blog-post">
+            <div className="flex flex-col">
               <h4>Overview</h4>
               <p>
               Nigeria faces significant challenges in managing its public finances. Inefficiencies, outdated financial data and decentralized information across ministries create obstacles to transparency and accountability, hindering economic growth. These issues are compounded by corruption, inadequate revenue and high expenses, resulting in a budget deficit of ₦5.60 trillion in 2021. Recognising the scale of the problem, the World Bank sponsored a state‑level project to improve transparency and accountability in budget and expenditure management. My role was to research and design an enterprise solution that would automate budget processes and bring visibility to state expenditure.
@@ -166,7 +166,7 @@ export default function FullGap() {
 
         <section className=" border-x border-stone-200 w-full px-6 lg:px-56 pt-16 pb-12 flex flex-row gap-0 h-min justify-center max-w-6xl mx-auto relative">
           <div className="w-full flex flex-row justify-start relative">
-            <div className="flex flex-col blog-post">
+            <div className="flex flex-col">
               <h4>Problem Statement</h4>
               <p>
               Nigeria&lsquo;s budget process was drowning in decentralised data, outdated manual workflows, and slow approvals — leading to inefficiencies, corruption risks, and a ₦5.60 trillion deficit in 2021.
@@ -182,7 +182,7 @@ export default function FullGap() {
 
         <section className=" border-x border-stone-200 w-full px-6 lg:px-56 pt-16 pb-12 flex flex-row gap-0 h-min justify-center max-w-6xl mx-auto relative">
           <div className="w-full flex flex-row justify-start relative">
-            <div className="flex flex-col blog-post">
+            <div className="flex flex-col">
               <h4>Research & Discovery</h4>
               <div className="mb-4">
                 <p>I began with comprehensive interviews and field surveys across two states. Through these sessions, I mapped user workflows, pain points, emotions and timeframes, and created a process flowchart to visualise interactions.</p>
@@ -213,7 +213,7 @@ export default function FullGap() {
 
         <section className="hidden border-x border-stone-200 w-full px-6 lg:px-56 pt-16 pb-12 flex flex-row gap-0 h-min justify-center max-w-6xl mx-auto relative">
           <div className="w-full flex flex-row justify-start relative">
-            <div className="flex flex-col blog-post">
+            <div className="flex flex-col">
               <h4>Research and Insights</h4>
               <div className="mb-4">
                 <strong>Field Research and User Interviews</strong>
@@ -252,7 +252,7 @@ export default function FullGap() {
 
         <section className=" border-x border-stone-200 w-full px-6 lg:px-56 pt-16 pb-12 flex flex-row gap-0 h-min justify-center max-w-6xl mx-auto relative">
           <div className="w-full flex flex-row justify-start relative">
-            <div className="flex flex-col blog-post">
+            <div className="flex flex-col">
               <h4>Solutions</h4>
               <p>
               With a clear understanding of user needs, the team brainstormed features for a digital budget module. Ideas ranged from automated workflow routing to real‑time expenditure dashboards. We prioritised features that improved transparency and shortened approval cycles.
@@ -264,7 +264,7 @@ export default function FullGap() {
 
         <section className="border-x border-y border-stone-200 w-full px-6 lg:px-56 py-16 flex flex-row gap-0 h-min justify-center max-w-6xl mx-auto relative">   
           <div className="flex flex-col gap-6 w-full">
-            <div className="flex flex-col blog-post">
+            <div className="flex flex-col">
                 <strong className="mb-4 block">Time-based Workflow</strong>
                 <p>After several wireframes and high‑fidelity prototypes, we pivoted to a timeline approach. This model presents each budget process as a series of time‑based events, making it easy for actors to see pending tasks, approval stages and handoffs. It also supports conditional branching, enabling departments to configure their own flows.</p>
                 
@@ -283,9 +283,9 @@ export default function FullGap() {
           </div>
         </section>
 
-        <section className="border-x  border-stone-200 w-full px-6 lg:px-56 py-16 flex flex-row gap-0 h-min justify-center max-w-6xl mx-auto relative">
+        <section className="border-x border-stone-200 w-full px-6 lg:px-56 py-16 flex flex-row gap-0 h-min justify-center max-w-6xl mx-auto relative">
           <div className="flex flex-col gap-6 w-full">
-            <div className="flex flex-col blog-post">
+            <div className="flex flex-col">
                 <strong className="mb-4 block">Reconciliation</strong>
                 <p>To address the issue of reconciliation, we designed a system that automatically compares budget entries with bank statements, ensuring accuracy and preventing discrepancies. This feature not only reduces manual effort but also enhances transparency by providing a clear audit trail of all financial transactions.</p>
                 
@@ -306,9 +306,9 @@ export default function FullGap() {
 
         <Divider />
 
-        <section className=" border-x border-stone-200 w-full px-6 lg:px-56 pt-16 pb-12 flex flex-row gap-0 h-min justify-center max-w-6xl mx-auto relative">
+        <section className="border-x border-b border-stone-200 w-full px-6 lg:px-56 pt-16 pb-12 flex flex-row gap-0 h-min justify-center max-w-6xl mx-auto relative">
           <div className="w-full flex flex-row justify-start relative">
-            <div className="flex flex-col blog-post">
+            <div className="flex flex-col">
               <h4>Outcome & Impact</h4>
               <p>
               The project was a success, with the digital budget module implemented in both states. The system has improved transparency and accountability in budget and expenditure management, and has helped to reduce the budget deficit.

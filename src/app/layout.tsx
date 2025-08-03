@@ -22,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" cz-shortcut-listen="true">
-      <body className={`${manrope.variable} relative antialiased box-border bg-main`}>
+      <body className={`${manrope.variable} relative antialiased box-border bg-main text-stone-950`}>
         {/* HEADER */}
         <HeaderMain />
         {/* MAIN CONTENT */}

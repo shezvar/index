@@ -38,10 +38,17 @@ export function ProjectItem({
   highlightWord: highlight,
 }: ProjectCardProps) {
   return (
-    <Card variant="default" padding="sm" className="">
+    <Card
+      variant="default"
+      padding="sm"
+      className="h-full flex flex-col"
+      style={{ height: "100%" }}
+      // Ensures the card itself stretches to fill the row height
+    >
       <a
-        className={`bg-${bgColor} flex flex-col group`}
+        className={`bg-${bgColor} flex flex-col group h-full`}
         href={link}
+        style={{ minHeight: 0 }}
       >
         <div className="relative rounded-lg flex items-center justify-center overflow-hidden h-64 max-h-[32rem] w-full bg-white shadow-lg border border-stone-200">
           <Image
@@ -63,14 +70,14 @@ export function ProjectItem({
             }}
           />
         </div>
-        <div className="flex flex-col mt-4 px-4 pb-4 pt-2">
+        <div className="flex flex-col flex-1 mt-4 px-4 pb-4 pt-2">
           <span className="text-xs uppercase font-bold text-stone-500 line-clamp-1">
             {type}
           </span>
           <h4 className="text-xl md:text-2xl mt-2 font-thin text-stone-800 transition-all duration-300">
             {highlight ? highlightWord(title, highlight) : title}
           </h4>
-          <p className="mt-2 text-stone-600 line-clamp-2">{description}</p>
+          <p className="mt-2 text-stone-600 line-clamp-2 flex-1">{description}</p>
         </div>
       </a>
     </Card>
