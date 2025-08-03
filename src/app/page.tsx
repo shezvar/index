@@ -15,6 +15,7 @@ import { BgPattern } from "@/components/bgPattern";
 import { ToolsCard } from "@/components/toolsLogo";
 import { FooterCTA } from "@/components/footerCTA";
 import portfolioData from "@/app/data/project.json";
+import { Button } from "@/components/buttons";
 
 const toolsLogoData = [
   {
@@ -194,7 +195,7 @@ export default async function Home() {
           <div className="w-full flex flex-col relative">
             <div className="max-w-3xl flex flex-col gap-2 mb-8">
               <h2 className="text-3xl md:text-4xl font-thin text-stone-400">
-                These are some{" "}
+                These are selected{" "}
                 <span className="text-stone-900">
                   projects I&apos;ve worked on
                 </span>{" "}
@@ -204,7 +205,8 @@ export default async function Home() {
 
             <div className="grid md:grid-cols-2 gap-8 h-full">
               {portfolioData
-                .filter(item => [1, 2].includes(item.id))
+                .filter(item => [3, 1, 6, 2].includes(item.id))
+                .sort((a, b) => [3, 1, 6, 2].indexOf(a.id) - [3, 1, 6, 2].indexOf(b.id))
                 .map((item, idx) => (
                 <ProjectItem
                   key={item.title || idx}
@@ -216,6 +218,16 @@ export default async function Home() {
                   highlightWord={item.highlightWord}
                 />
               ))}
+            </div>
+            <div className="pt-12 flex justify-center w-full relative">
+              <a
+                href="/projects"
+                className="w-full"
+              >
+                <Button variant="secondary" size="md" className="w-full">
+                  View All Projects
+                </Button>
+              </a>
             </div>
           </div>
         </section>
