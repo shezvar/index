@@ -83,7 +83,7 @@ export function ToolsCard({ icons = toolsLogoData, selectedIds }: ToolsCardProps
       ? icons.filter((icon) => selectedIds.includes(icon.id))
       : icons;
   return (
-    <div className="flex flex-wrap gap-4 justify-center">
+    <div className="flex flex-wrap gap-4 justify-center items-center">
       {iconsToDisplay.map((icon) => (
       <div
         key={icon.id} 
@@ -95,16 +95,15 @@ export function ToolsCard({ icons = toolsLogoData, selectedIds }: ToolsCardProps
           alt={icon.alt}
           width={48}
           height={48}
-          className="object-contain h-12 w-12 transition-transform duration-300 hover:scale-110"
+          className="object-contain h-8 w-8 transition-transform duration-300 hover:scale-110"
           loading="lazy"
           quality={100}
           draggable="false"
-          unoptimized={true}
           fetchPriority="low"
         />
         ) : icon.Icon ? (
         <icon.Icon
-          className="h-12 w-12 transition-transform duration-300 hover:scale-110 text-indigo-700"
+          className="h-8 w-8 transition-transform duration-300 hover:scale-110 text-indigo-700"
         />
         ) : null}
         <span className="text-xs text-stone-500 mt-2">{icon.text}</span>

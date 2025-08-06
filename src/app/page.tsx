@@ -185,7 +185,7 @@ export default function Home() {
                   />
                 ))}
             </div>
-            <div className="pt-12 flex justify-center w-full relative">
+            <div className="pt-8 flex justify-center w-full relative">
               <a href="/projects" className="w-full">
                 <Button variant="secondary" size="md" className="w-full">
                   View All Projects
