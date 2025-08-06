@@ -1,25 +1,11 @@
 "use client";
 import Image from "next/image";
 import { Divider } from "@/components/divider";
-import { ProjectImageViewOne } from "@/components/projectImageViewer";
 import { FooterCTA } from "@/components/footerCTA";
 import ProjectBackButton from "@/components/ProjectBackButton";
 import introData from "@/app/data/project.json";
 import ProjectNavigation from "@/components/projectNavigation";
-
-const imageViewerData = [
-  { src: "/assets/fullgap/fg-projectcreate.png", alt: "Create Project" },
-  { src: "/assets/fullgap/fg-projectdetails.png", alt: "Project Details" },
-  { src: "/assets/fullgap/fg-projectdetailslist.png", alt: "Project Details List" },
-  { src: "/assets/fullgap/fg-projectdetailstask.png", alt: "Project Details Task" },
-
-  { src: "/assets/fullgap/fg-invoicehome.png", alt: "Invoice Home" },
-  { src: "/assets/fullgap/fg-invoicedetails.png", alt: "Invoice Details" },
-  { src: "/assets/fullgap/fg-invoicecreate.png", alt: "Invoice Create" },
-
-  { src: "/assets/fullgap/fg-contractcreate1.png", alt: "Contract Creation" },
-  { src: "/assets/fullgap/fg-contractcreate2.png", alt: "Contract Creation Footer" },
-];
+import { SingleImageView } from "@/components/singleImageViewer";
 
 export default function FullGap() {
   return (
@@ -173,10 +159,12 @@ export default function FullGap() {
         </section>
 
         {/* Project Management */}
-        <section className="border-x border-y border-stone-200 w-full px-6 lg:px-56 py-16 flex flex-row gap-0 h-min justify-center max-w-6xl mx-auto relative">
-          <div className="flex flex-col gap-6 w-full">
+        <section className="border-x border-t border-stone-200 w-full px-6 py-16 flex flex-col gap-0 h-min justify-center max-w-6xl mx-auto relative">
+          <div className="flex flex-col gap-6 w-full lg:px-48">
             <div className="flex flex-col">
-              <strong className="mb-4 block">1. Project Management: Simplicity Meets Power</strong>
+              <strong className="mb-4 block">
+              Project Management: Simplicity Meets Power
+              </strong>
               <ul className="list-disc pl-6 *:mb-3">
                 <li>
                   <span className="font-bold pr-2">Instant Project Creation:</span>
@@ -195,26 +183,29 @@ export default function FullGap() {
                   Comment, react, assign, and manage tasks together. Collaboration is seamless, social, and genuinely enjoyable.
                 </li>
               </ul>
-              <div>
-                {imageViewerData.slice(0, 4).map((image, index) => (
-                  <ProjectImageViewOne
-                    key={index}
-                    src={image.src}
-                    alt={image.alt}
-                    images={imageViewerData}
-                    index={index}
-                  />
-                ))}
-              </div>
+            </div>
+          </div>
+
+          <div className="grid gap-6 grid-cols-12 w-full mt-12">
+            <div className="w-full rounded-3xl overflow-hidden col-span-12">
+              <SingleImageView src="/assets/fullgap/fg-create.png" alt="Project Creation" />
+            </div>
+            <div className="w-full rounded-3xl overflow-hidden col-span-12">
+              <SingleImageView src="/assets/fullgap/fg-pj-deets12.png" alt="Project Details 2" />
+            </div>
+            <div className="w-full rounded-3xl overflow-hidden col-span-12">
+              <SingleImageView src="/assets/fullgap/fg-pj-deets3.png" alt="Project Details 3" />
             </div>
           </div>
         </section>
 
         {/* Invoice Management */}
-        <section className="border-x border-y border-stone-200 w-full px-6 lg:px-56 py-16 flex flex-row gap-0 h-min justify-center max-w-6xl mx-auto relative">
-          <div className="flex flex-col gap-6 w-full">
+        <section className="border-x border-stone-200 w-full px-6 py-16 flex flex-col gap-0 h-min justify-center max-w-6xl mx-auto relative">
+          <div className="flex flex-col gap-6 w-full lg:px-48">
             <div className="flex flex-col">
-              <strong className="mb-4 block">2. Invoice Management: Clarity & Control</strong>
+              <strong className="mb-4 block">
+              Invoice Management: Clarity & Control
+              </strong>
               <ul className="list-disc pl-6 *:mb-3">
                 <li>
                   <span className="font-bold pr-2">Insightful Invoice Reports:</span>
@@ -229,26 +220,29 @@ export default function FullGap() {
                   Users can pull content from existing projects, preview invoices in real time, and enjoy a modern, streamlined flow that saves time and reduces errors.
                 </li>
               </ul>
-              <div>
-                {imageViewerData.slice(4, 7).map((image, index) => (
-                  <ProjectImageViewOne
-                    key={index}
-                    src={image.src}
-                    alt={image.alt}
-                    images={imageViewerData}
-                    index={index}
-                  />
-                ))}
-              </div>
+            </div>
+          </div>
+
+          <div className="grid gap-6 grid-cols-12 w-full mt-12">
+            <div className="w-full rounded-3xl overflow-hidden col-span-12">
+              <SingleImageView src="/assets/fullgap/fg-inv-1.png" alt="Project Creation" />
+            </div>
+            <div className="w-full rounded-3xl overflow-hidden col-span-12">
+              <SingleImageView src="/assets/fullgap/fg-inv-2.png" alt="Project Creation" />
+            </div>
+            <div className="w-full rounded-3xl overflow-hidden col-span-12">
+              <SingleImageView src="/assets/fullgap/fg-inv-3.png" alt="Project Creation" />
             </div>
           </div>
         </section>
 
         {/* Contract Management */}
-        <section className="border-x border-b border-stone-200 w-full px-6 lg:px-56 py-16 flex flex-row gap-0 h-min justify-center max-w-6xl mx-auto relative">
-          <div className="flex flex-col gap-6 w-full">
+        <section className="border-x border-b border-stone-200 w-full px-6 py-16 flex flex-col gap-0 h-min justify-center max-w-6xl mx-auto relative">
+          <div className="flex flex-col gap-6 w-full lg:px-48">
             <div className="flex flex-col">
-              <strong className="mb-4 block">3. Contract Management: Empowerment & Flexibility</strong>
+              <strong className="mb-4 block">
+              Contract Management: Empowerment & Flexibility
+              </strong>
               <ul className="list-disc pl-6 *:mb-3">
                 <li>
                   <span className="font-bold pr-2">Modular Workflows:</span>
@@ -263,17 +257,15 @@ export default function FullGap() {
                   Fullgap is designed to scale—whether you&lsquo;re a freelancer or a growing business, the platform grows with you.
                 </li>
               </ul>
-              <div>
-                {imageViewerData.slice(7, 9).map((image, index) => (
-                  <ProjectImageViewOne
-                    key={index}
-                    src={image.src}
-                    alt={image.alt}
-                    images={imageViewerData}
-                    index={index}
-                  />
-                ))}
-              </div>
+            </div>
+          </div>
+
+          <div className="grid gap-6 grid-cols-12 w-full mt-12">
+            <div className="w-full rounded-3xl overflow-hidden col-span-12">
+              <SingleImageView src="/assets/fullgap/fg-cont-1.png" alt="Project Creation" />
+            </div>
+            <div className="w-full rounded-3xl overflow-hidden col-span-12">
+              <SingleImageView src="/assets/fullgap/fg-cont-2.png" alt="Project Creation" />
             </div>
           </div>
         </section>

@@ -30,7 +30,7 @@
     "description": "A personalized learning platform that bridges the digital skills gap through blended learning and real-time support",
     "link": "/projects/dtalearner",
     "highlightWord": "Digital Training Academy",
-    "tags": ["Learning Platform", "UX Research", "Mobile Design"]
+    "tags": ["Learning Platform", "UX Research"]
   },
   {
     "id": 4,
@@ -41,7 +41,9 @@
     "description": "A comprehensive admin dashboard for managing 20,000 learners with real-time analytics and Coursera integration",
     "link": "/projects/dtaadmin",
     "highlightWord": "Admin Platform",
-    "tags": ["Admin Dashboard", "Data Analytics", "API Integration"]
+    "tags": ["Admin Dashboard", "Data Analytics", "API Integration"],
+    "comingSoon": true 
+
   },
   {
     "id": 5,

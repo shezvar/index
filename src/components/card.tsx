@@ -14,7 +14,7 @@ interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 const baseClasses =
-  "rounded-2xl transition-shadow duration-200 shadow-sm border border-stone-200 gap-0 h-min";
+  "rounded-2xl transition-shadow duration-200 shadow-sm border border-stone-200 gap-0";
 
 const variantClasses: Record<CardVariant, string> = {
   default: "bg-white",

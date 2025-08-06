@@ -10,6 +10,7 @@ interface ProjectCardProps {
   link: string;
   bgColor?: string;
   highlightWord?: string;
+  comingSoon?: boolean; // Add this line
 }
 
 function highlightWord(
@@ -36,6 +37,7 @@ export function ProjectItem({
   link,
   bgColor = "white",
   highlightWord: highlight,
+  comingSoon = false, // Add this line and set default
 }: ProjectCardProps) {
   return (
     <Card
@@ -51,6 +53,12 @@ export function ProjectItem({
         style={{ minHeight: 0 }}
       >
         <div className="relative rounded-lg flex items-center justify-center overflow-hidden h-64 max-h-[32rem] w-full bg-white shadow-lg border border-stone-200">
+          {/* Conditionally render the "Coming Soon" badge */}
+          {comingSoon && (
+            <span className="absolute top-2 right-2 text-xs bg-indigo-600 px-2 py-1 rounded-md text-stone-100 font-semibold">
+              Coming Soon
+            </span>
+          )}
           <Image
             src={image}
             alt={title}

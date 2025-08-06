@@ -141,7 +141,7 @@ export function HeaderMain() {
                     href="https://cal.com/segun-oroyo"
                     rel="noopener noreferrer"
                     target="_blank"
-                    className="cursor-pointer p-4 py-3 rounded-xl bg-stone-900 text-white font-semibold hover:bg-stone-700 transition"
+                    className="px-4 py-1.5 text-sm cursor-pointer bg-stone-900 text-white hover:bg-stone-700 shadow inline-flex items-center justify-center font-medium rounded-lg transition focus:outline-none focus:ring-2 focus:ring-offset-2"
                   >
                     Let&lsquo;s Talk
                   </a>

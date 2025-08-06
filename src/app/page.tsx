@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import { Card } from "@/components/card";
 import { ProjectItem } from "@/components/portfolioCard";
 import {
@@ -7,62 +8,29 @@ import {
   BriefcaseBusiness,
   Puzzle,
   Users,
-  Brain,
 } from "lucide-react";
 import Image from "next/image";
 import { Divider } from "@/components/divider";
 import { BgPattern } from "@/components/bgPattern";
-import { ToolsCard } from "@/components/toolsLogo";
 import { FooterCTA } from "@/components/footerCTA";
 import portfolioData from "@/app/data/project.json";
 import { Button } from "@/components/buttons";
+import { ToolsDrawer } from "@/components/toolsDrawer";
+import { ToolsCard } from "@/components/toolsLogo";
 
-const toolsLogoData = [
-  {
-    src: "/assets/tools/chatgpt-6.svg",
-    alt: "ChatGPT Icon",
-    text: "ChatGPT",
-  },
-  {
-    src: "/assets/tools/figma-icon.svg",
-    alt: "Figma Icon",
-    text: "Figma",
-  },
-  {
-    src: "/assets/tools/lovable-logo-icon.svg",
-    alt: "Lovable Icon",
-    text: "Lovable",
-  },
-  {
-    src: "/assets/tools/gemini-icon.svg",
-    alt: "Gemini Icon",
-    text: "Gemini",
-  },
-  {
-    src: "/assets/tools/cursor-icon.svg",
-    alt: "Cursor Icon",
-    text: "Cursor",
-  },
-  {
-    Icon: Brain,
-    alt: "Brain Icon",
-    text: "Thought",
-  },
-];
-
-
-export default async function Home() {
+export default function Home() {
+  const [drawerOpen, setDrawerOpen] = useState(false);
   
   return (
     <div className="min-h-screen flex flex-col w-full">
       <main className="flex w-full flex-col flex-nowrap gap-0 relative p-0 justify-center min-h-0">
-        {/* HERO SECTION */}
 
         <section
           className="py-10 w-full border-x border-stone-200 max-w-6xl mx-auto relative"
           id="hero"
         ></section>
 
+        {/* HERO SECTION */}
         <section className="border-x border-stone-200 w-full px-3 py-16 flex flex-col gap-0 h-min items-center justify-center max-w-6xl mx-auto relative group/sideCard">
           <div className="flex relative items-baseline">
             <Card
@@ -127,70 +95,64 @@ export default async function Home() {
 
         <Divider />
 
+        {/* BRIEF SECTION */}
         <section className="border-x border-y border-stone-200 w-full px-6 md:px-16 py-16 flex flex-row gap-0 h-min justify-center max-w-6xl mx-auto relative">
           <BgPattern />
           <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 items-stretch relative">
-            <div className="h-full flex">
-              <Card
-                variant="default"
-                padding="md"
-                className="w-full flex flex-row relative h-full"
-              >
-                <div className="flex flex-col w-full">
-                  <WandSparkles className="size-6 mb-4" />
-                  <span className="text-base">
-                    A generalist that builds using AI
-                  </span>
-                </div>
-              </Card>
-            </div>
-            <div className="h-full flex">
-              <Card
-                variant="default"
-                padding="md"
-                className="w-full flex flex-row relative h-full"
-              >
-                <div className="flex flex-col w-full">
-                  <BriefcaseBusiness className="size-6 mb-4" />
-                  <span className="text-base">
-                    Available for remote or hybrid role
-                  </span>
-                </div>
-              </Card>
-            </div>
-            <div className="h-full flex">
-              <Card
-                variant="default"
-                padding="md"
-                className="w-full flex flex-row relative h-full"
-              >
-                <div className="flex flex-col w-full">
-                  <Puzzle className="size-6 mb-4" />
-                  <span className="text-base">
-                    An individual contributor and a team player
-                  </span>
-                </div>
-              </Card>
-            </div>
-            <div className="h-full flex">
-              <Card
-                variant="default"
-                padding="md"
-                className="w-full flex flex-row relative h-full"
-              >
-                <div className="flex flex-col w-full">
-                  <Users className="size-6 mb-4" />
-                  <span className="text-base">
-                    Experienced in leading a product team
-                  </span>
-                </div>
-              </Card>
-            </div>
+            <Card
+              variant="default"
+              padding="md"
+              className="w-full flex flex-row relative h-full"
+            >
+              <div className="flex flex-col w-full">
+                <WandSparkles className="size-6 mb-4" />
+                <span className="text-base">
+                  A generalist that builds using AI
+                </span>
+              </div>
+            </Card>
+            <Card
+              variant="default"
+              padding="md"
+              className="w-full flex flex-row relative h-full"
+            >
+              <div className="flex flex-col w-full">
+                <BriefcaseBusiness className="size-6 mb-4" />
+                <span className="text-base">
+                  Available for full-time, part-time, and freelance work
+                </span>
+              </div>
+            </Card>
+            <Card
+              variant="default"
+              padding="md"
+              className="w-full flex flex-row relative h-full"
+            >
+              <div className="flex flex-col w-full">
+                <Puzzle className="size-6 mb-4" />
+                <span className="text-base">
+                  An individual contributor and a team player
+                </span>
+              </div>
+            </Card>
+            <Card
+              variant="default"
+              padding="md"
+              className="w-full flex flex-row relative h-full"
+            >
+              <div className="flex flex-col w-full">
+                <Users className="size-6 mb-4" />
+                <span className="text-base">
+                  Experienced in leading a product team
+                </span>
+              </div>
+            </Card>
           </div>
         </section>
 
         <Divider />
 
+        {/* SELECTED PROJECTS SECTION */}
         <section className="border-x border-stone-200 w-full px-6 md:px-16 py-16 flex flex-row gap-0 h-min justify-center max-w-6xl mx-auto relative">
           <div className="w-full flex flex-col relative">
             <div className="max-w-3xl flex flex-col gap-2 mb-8">
@@ -205,25 +167,26 @@ export default async function Home() {
 
             <div className="grid md:grid-cols-2 gap-8 h-full">
               {portfolioData
-                .filter(item => [3, 1, 6, 2].includes(item.id))
-                .sort((a, b) => [3, 1, 6, 2].indexOf(a.id) - [3, 1, 6, 2].indexOf(b.id))
+                .filter((item) => [3, 1, 6, 2].includes(item.id))
+                .sort(
+                  (a, b) =>
+                    [3, 1, 6, 2].indexOf(a.id) - [3, 1, 6, 2].indexOf(b.id)
+                )
                 .map((item, idx) => (
-                <ProjectItem
-                  key={item.title || idx}
-                  image={item.src}
-                  type={item.type || ''}
-                  title={item.title || ''}
-                  description={item.description || ''}
-                  link={item.link || ''}
-                  highlightWord={item.highlightWord}
-                />
-              ))}
+                  <ProjectItem
+                    key={item.title || idx}
+                    image={item.src}
+                    type={item.type || ""}
+                    title={item.title || ""}
+                    description={item.description || ""}
+                    link={item.link || ""}
+                    highlightWord={item.highlightWord}
+                    comingSoon={item.comingSoon || false} // Pass the comingSoon prop
+                  />
+                ))}
             </div>
             <div className="pt-12 flex justify-center w-full relative">
-              <a
-                href="/projects"
-                className="w-full"
-              >
+              <a href="/projects" className="w-full">
                 <Button variant="secondary" size="md" className="w-full">
                   View All Projects
                 </Button>
@@ -234,6 +197,7 @@ export default async function Home() {
 
         <Divider />
 
+        {/* TOOLS SECTION */}
         <section className="border-x border-y border-stone-200 w-full px-6 md:px-16 py-0 flex flex-row gap-0 h-min justify-center max-w-6xl mx-auto relative">
           <BgPattern />
           <div className="z-[1] bg-main w-full max-w-6xl mx-auto px-6 md:px-16 py-16 border-x">
@@ -245,20 +209,28 @@ export default async function Home() {
                   <span className="text-stone-900">work efficiently</span> and
                   produce outstanding results.
                 </h2>
+                <div className="">
+                  <Button
+                    onClick={() => setDrawerOpen(true)}
+                    variant="secondary"
+                    size="md"
+                    className="mt-4"
+                  >
+                    Explore My Toolkit
+                  </Button>
+                </div>
               </div>
 
               {/* Right: Icon grid */}
               <div className="flex-1 flex items-center justify-center md:ml-auto">
                 <div className="flex flex-wrap justify-start items-center gap-4 overflow-hidden">
-                  <ToolsCard icons={toolsLogoData.map(icon => ({
-                    ...icon,
-                    text: icon.text || ''
-                  }))} />
+                  <ToolsCard selectedIds={[1, 2, 3, 4, 5, 6]} />
                 </div>
               </div>
             </div>
           </div>
         </section>
+        <ToolsDrawer open={drawerOpen} setOpen={setDrawerOpen} />
 
         <Divider />
 
@@ -266,7 +238,6 @@ export default async function Home() {
         <FooterCTA />
         <Divider />
       </main>
-
     </div>
   );
 }
