@@ -1,1 +1,0 @@
-self.__NEXT_FONT_MANIFEST='{"pages":{},"app":{"/Users/segunoroyo/Documents/Work/Mine/Webfolio/segunoroyo/src/app/layout":["static/media/e1c529c04de64b40-s.p.woff2","static/media/3d9ea938b6afa941-s.p.woff2"]},"appUsingSizeAdjust":true,"pagesUsingSizeAdjust":false}';

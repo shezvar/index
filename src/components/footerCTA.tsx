@@ -109,6 +109,11 @@ export function FooterCTA() {
             alt="Call to Action Illustration"
             width={500}
             height={500}
+            quality={100}
+            loading="lazy"
+            draggable={false}
+            unoptimized={true}
+            fetchPriority="high"
             className="w-full h-auto object-contain"
           />
         </div>

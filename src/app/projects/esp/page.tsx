@@ -4,22 +4,11 @@ import { BriefcaseBusiness, Users, MonitorSmartphone, Calendar } from "lucide-re
 import Image from "next/image";
 import { Divider } from "@/components/divider";
 import { BgPattern } from "@/components/bgPattern";
-import { ProjectImageViewOne } from "@/components/projectImageViewer";
 import { FooterCTA } from "@/components/footerCTA";
 import ProjectBackButton from "@/components/ProjectBackButton";
 import introData from "@/app/data/project.json";
 import ProjectNavigation from "@/components/projectNavigation";
-
-const imageViewerData = [
-  { src: "/assets/esp/esp-dashboard.png", alt: "Beneficiary Dashboard" },
-  { src: "/assets/esp/esp-forms.png", alt: "Adaptive Forms" },
-  { src: "/assets/esp/esp-status.png", alt: "Status Updates" },
-  { src: "/assets/esp/esp-analytics.png", alt: "Analytics Dashboard" },
-  { src: "/assets/esp/esp-field.png", alt: "Field Agent Interface" },
-  { src: "/assets/esp/esp-callcenter.png", alt: "Call Center Dashboard" },
-  { src: "/assets/esp/esp-mobile.png", alt: "Mobile Responsive" },
-  { src: "/assets/esp/esp-offline.png", alt: "Offline Capabilities" },
-];
+import { SingleImageView } from "@/components/singleImageViewer";
 
 export default function Esp() {
   return (
@@ -414,19 +403,21 @@ export default function Esp() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-6 w-full">
-            <div className="flex flex-col">
-              <div className="">
-              {imageViewerData.slice(0, 2).map((image, index) => (
-                  <ProjectImageViewOne
-                    key={index}
-                    src={image.src}
-                    alt={image.alt}
-                    images={imageViewerData}
-                    index={index}
-                  />
-                ))}
-              </div>
+          <div className="grid gap-6 grid-cols-12 w-full mt-12">
+            <div className="w-full rounded-3xl overflow-hidden col-span-12">
+              <SingleImageView src="/assets/dtalearner/fme-learner-session-01.png" alt="Project Details 2" />
+            </div>
+            <div className="w-full rounded-3xl overflow-hidden col-span-12">
+              <SingleImageView src="/assets/dtalearner/fme-learner-session-02.png" alt="Project Details 2" />
+            </div>
+            <div className="w-full rounded-3xl overflow-hidden col-span-12">
+              <SingleImageView src="/assets/dtalearner/fme-learner-support-01.png" alt="Project Details 2" />
+            </div>
+            <div className="w-full rounded-3xl overflow-hidden col-span-12">
+              <SingleImageView src="/assets/dtalearner/fme-learner-support-02.png" alt="Project Details 2" />
+            </div>
+            <div className="w-full rounded-3xl overflow-hidden col-span-12">
+              <SingleImageView src="/assets/dtalearner/fme-learner-support-03.png" alt="Project Details 2" />
             </div>
           </div>
         </section>
@@ -447,21 +438,23 @@ export default function Esp() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-6 w-full">
-            <div className="flex flex-col">
-              <div className="">
-              {imageViewerData.slice(2, 4).map((image, index) => (
-                  <ProjectImageViewOne
-                    key={index}
-                    src={image.src}
-                    alt={image.alt}
-                    images={imageViewerData}
-                    index={index}
-                  />
-                ))}
-              </div>
-            </div>
-          </div>
+          <div className="grid gap-6 grid-cols-12 w-full mt-12">
+                      <div className="w-full rounded-3xl overflow-hidden col-span-12">
+                        <SingleImageView src="/assets/dtalearner/fme-learner-session-01.png" alt="Project Details 2" />
+                      </div>
+                      <div className="w-full rounded-3xl overflow-hidden col-span-12">
+                        <SingleImageView src="/assets/dtalearner/fme-learner-session-02.png" alt="Project Details 2" />
+                      </div>
+                      <div className="w-full rounded-3xl overflow-hidden col-span-12">
+                        <SingleImageView src="/assets/dtalearner/fme-learner-support-01.png" alt="Project Details 2" />
+                      </div>
+                      <div className="w-full rounded-3xl overflow-hidden col-span-12">
+                        <SingleImageView src="/assets/dtalearner/fme-learner-support-02.png" alt="Project Details 2" />
+                      </div>
+                      <div className="w-full rounded-3xl overflow-hidden col-span-12">
+                        <SingleImageView src="/assets/dtalearner/fme-learner-support-03.png" alt="Project Details 2" />
+                      </div>
+                    </div>
         </section>
 
         <section className="border-x border-stone-200 w-full px-6 py-16 flex flex-col gap-0 h-min justify-center max-w-6xl mx-auto relative">
@@ -481,19 +474,21 @@ export default function Esp() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-6 w-full">
-            <div className="flex flex-col">
-              <div className="">
-              {imageViewerData.slice(4, 6).map((image, index) => (
-                  <ProjectImageViewOne
-                    key={index}
-                    src={image.src}
-                    alt={image.alt}
-                    images={imageViewerData}
-                    index={index}
-                  />
-                ))}
-              </div>
+          <div className="grid gap-6 grid-cols-12 w-full mt-12">
+            <div className="w-full rounded-3xl overflow-hidden col-span-12">
+              <SingleImageView src="/assets/dtalearner/fme-learner-session-01.png" alt="Project Details 2" />
+            </div>
+            <div className="w-full rounded-3xl overflow-hidden col-span-12">
+              <SingleImageView src="/assets/dtalearner/fme-learner-session-02.png" alt="Project Details 2" />
+            </div>
+            <div className="w-full rounded-3xl overflow-hidden col-span-12">
+              <SingleImageView src="/assets/dtalearner/fme-learner-support-01.png" alt="Project Details 2" />
+            </div>
+            <div className="w-full rounded-3xl overflow-hidden col-span-12">
+              <SingleImageView src="/assets/dtalearner/fme-learner-support-02.png" alt="Project Details 2" />
+            </div>
+            <div className="w-full rounded-3xl overflow-hidden col-span-12">
+              <SingleImageView src="/assets/dtalearner/fme-learner-support-03.png" alt="Project Details 2" />
             </div>
           </div>
         </section>
@@ -514,19 +509,21 @@ export default function Esp() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-6 w-full">
-            <div className="flex flex-col">
-              <div className="">
-              {imageViewerData.slice(6, 8).map((image, index) => (
-                  <ProjectImageViewOne
-                    key={index}
-                    src={image.src}
-                    alt={image.alt}
-                    images={imageViewerData}
-                    index={index}
-                  />
-                ))}
-              </div>
+          <div className="grid gap-6 grid-cols-12 w-full mt-12">
+            <div className="w-full rounded-3xl overflow-hidden col-span-12">
+              <SingleImageView src="/assets/dtalearner/fme-learner-session-01.png" alt="Project Details 2" />
+            </div>
+            <div className="w-full rounded-3xl overflow-hidden col-span-12">
+              <SingleImageView src="/assets/dtalearner/fme-learner-session-02.png" alt="Project Details 2" />
+            </div>
+            <div className="w-full rounded-3xl overflow-hidden col-span-12">
+              <SingleImageView src="/assets/dtalearner/fme-learner-support-01.png" alt="Project Details 2" />
+            </div>
+            <div className="w-full rounded-3xl overflow-hidden col-span-12">
+              <SingleImageView src="/assets/dtalearner/fme-learner-support-02.png" alt="Project Details 2" />
+            </div>
+            <div className="w-full rounded-3xl overflow-hidden col-span-12">
+              <SingleImageView src="/assets/dtalearner/fme-learner-support-03.png" alt="Project Details 2" />
             </div>
           </div>
         </section>

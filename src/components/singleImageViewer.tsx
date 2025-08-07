@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import { X } from "lucide-react";
+import Image from "next/image";
 
 interface SingleImageViewProps {
   src: string;
@@ -40,8 +41,16 @@ export function SingleImageView({ src, alt }: SingleImageViewProps) {
         className="cursor-zoom-in"
         onClick={() => setIsOpen(true)}
       >
-        <img src={src} alt="Project Creation" className="object-contain w-full h-full"/>
-        
+        <Image
+          src={src}
+          alt={alt}
+          width={1400}
+          height={400}
+          quality={75}
+          loading="lazy"
+          className="object-contain w-full h-full"
+        />
+
       </div>
 
       {isOpen && (
@@ -53,8 +62,16 @@ export function SingleImageView({ src, alt }: SingleImageViewProps) {
               <X size={24} />
             </button>
           <div className="relative w-full max-h-[90%]" ref={modalRef}>
-            <img src={src} alt={alt} className="object-contain w-full h-full h-[90vh]"/>
-            
+            <Image
+              src={src}
+              alt={alt}
+              className="object-contain w-full h-full h-[90vh]"
+              width={1400}
+              height={400}
+              quality={100}
+              loading="lazy"
+            />
+
           </div>
         </div>
       )}

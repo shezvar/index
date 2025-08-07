@@ -64,7 +64,11 @@ export function ProjectItem({
             alt={title}
             width={600}
             height={400}
-            quality={100}
+            quality={70}
+            loading="lazy"
+            draggable={false}
+            unoptimized={true}
+            fetchPriority="high"
             className="object-contain group-hover:scale-105 transition-transform duration-300"
             style={{
               display: "block",
