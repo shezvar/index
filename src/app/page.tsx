@@ -44,6 +44,7 @@ export default function Home() {
                   alt="Segun Oroyo"
                   width={400}
                   height={400}
+                  loading="lazy"
                   className="rounded-full object-cover ml-auto"
                 />
               </div>
@@ -60,6 +61,7 @@ export default function Home() {
                   alt="Segun Oroyo"
                   width={400}
                   height={400}
+                  loading="lazy"
                   className="rounded-full object-cover ml-auto"
                 />
               </div>
@@ -76,6 +78,7 @@ export default function Home() {
                   alt="Segun Oroyo"
                   width={400}
                   height={400}
+                  loading="lazy"
                   className="rounded-full object-cover ml-auto"
                 />
               </div>

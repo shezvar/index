@@ -75,6 +75,7 @@ export function ProjectItem({
             width={600}
             height={400}
             quality={70}
+            loading="lazy"
             fetchPriority="high"
             className="object-contain group-hover:scale-105 transition-transform duration-300"
             style={{

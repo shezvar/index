@@ -3,6 +3,8 @@ import { Manrope } from "next/font/google";
 import "./globals.css";
 import { Footer } from "@/components/footer";
 import { HeaderMain } from "@/components/header";
+import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const manrope = Manrope({
   subsets: ['latin'],
@@ -13,6 +15,10 @@ const manrope = Manrope({
 export const metadata: Metadata = {
   title: "Segun Oroyo",
   description: "My personal website",
+  metadataBase: new URL('https://your-domain.vercel.app'),
+  openGraph: {
+    images: ['/assets/hero-image.png'],
+  },
 };
 
 export default function RootLayout({
@@ -22,6 +28,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" cz-shortcut-listen="true">
+      <head>
+        {/* Preload critical images */}
+        <link rel="preload" href="/assets/hero-image.png" as="image" />
+        <link rel="preload" href="/assets/pencilstyleimage.png" as="image" />
+        
+        {/* DNS prefetch for external resources */}
+        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+        
+        {/* Preconnect to external domains */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      </head>
       <body className={`${manrope.variable} relative antialiased box-border bg-main text-stone-950`}>
         {/* HEADER */}
         <HeaderMain />
@@ -30,6 +49,8 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

@@ -57,6 +57,7 @@ export const ProjectIntro: React.FC<ProjectIntroProps> = ({
                 width={1600}
                 height={800}
                 quality={70}
+                loading="lazy"
                 className="object-contain"
                 style={{
                   width: "100%",
