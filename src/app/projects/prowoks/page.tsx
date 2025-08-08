@@ -1,84 +1,59 @@
 "use client";
 import { Card } from "@/components/card";
-import { BriefcaseBusiness, Users, MonitorSmartphone, Calendar } from "lucide-react";
+import {
+  BriefcaseBusiness,
+  Calendar,
+  MonitorSmartphone,
+  Users,
+} from "lucide-react";
 import Image from "next/image";
 import { Divider } from "@/components/divider";
 import { BgPattern } from "@/components/bgPattern";
-import { FooterCTA } from "@/components/footerCTA";
-import ProjectBackButton from "@/components/ProjectBackButton";
-import introData from "@/app/data/project.json";
-import ProjectNavigation from "@/components/projectNavigation";
 import { SingleImageView } from "@/components/singleImageViewer";
+import { KeyFindings } from "@/components/KeyFindings";
+import ProjectLayout from "../ProjectLayout";
 
 export default function FullGap() {
+  const findings = [
+    {
+      title: "One-Size-Fits-All Role Was Failing",
+      description: (
+        <>
+          The initial &quot;Actor&quot; role was too broad. Interviews revealed that
+          tasks ranged from simple data entry to high-level financial
+          approvals. This mismatch created friction, with users either lacking
+          permissions or being overwhelmed by irrelevant options.
+        </>
+      ),
+    },
+    {
+      title: "Manual Handoffs Caused Bottlenecks",
+      description: (
+        <>
+          The existing budget process relied on manual handoffs via email and
+          paper forms. This led to significant delays, lost documents, and a
+          total lack of visibility. Users expressed deep frustration with the
+          &quot;black box&quot; nature of the approval chain.
+        </>
+      ),
+    },
+    {
+      title: "Data Discrepancies Eroded Trust",
+      description: (
+        <>
+          A critical discovery was the widespread mistrust in financial data.
+          Without automated reconciliation, users spent hours manually
+          cross-checking figures, which delayed critical decisions and eroded
+          confidence in the system&apos;s accuracy.
+        </>
+      ),
+    },
+  ];
+
   return (
-    <div className="min-h-screen flex flex-col w-full">
-      <main className="flex w-full flex-col flex-nowrap gap-0 relative p-0 justify-center min-h-0">
-        {/* HERO SECTION */}
-
-        <section
-          className="py-10 w-full border-x border-stone-200 max-w-6xl mx-auto relative"
-          id="hero"
-        ></section>
-
-        <section className="border-x border-stone-200 w-full px-3 pt-16 flex flex-col gap-0 h-min max-w-6xl mx-auto relative group/sideCard">
-          <div className="lg:px-4">
-            <ProjectBackButton />
-          </div>
-          {introData
-            .filter((item) => item.id === 2)
-            .map((item) => (
-              <div
-                key={item.title}
-                className="w-full flex flex-col items-center justify-center"
-              >
-                <div className="mb-8 max-w-[66rem] mx-auto relative">
-                  <h2 className="text-3xl md:text-[3rem] font-thin text-stone-900 leading-[1.3] mb-4">
-                    {item.title}
-                  </h2>
-                  <p className="text-stone-700 text-xl mb-4">
-                    {item.description}
-                  </p>
-                  <div className="w-full">
-                    <div className="flex flex-wrap gap-2 mt-4">
-                      {item.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="text-stone-800 uppercase text-xs bg-white px-3 py-1 rounded-lg border border-stone-200"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-
-                <div className="relative rounded-2xl flex items-center justify-center overflow-hidden h-[40rem] w-full bg-white mt-6 shadow-md border border-stone-400">
-                  <Image
-                    src={item.src}
-                    alt={item.title}
-                    width={600}
-                    height={400}
-                    className="object-contain"
-                    style={{
-                      display: "block",
-                      width: "100%",
-                      height: "100%",
-                      objectPosition: "center",
-                      objectFit: "cover",
-                      maxHeight: "100%",
-                      maxWidth: "100%",
-                      imageRendering: "crisp-edges", // Add this line for sharper images
-                    }}
-                  />
-                </div>
-              </div>
-            ))}
-        </section>
-
-        <Divider />
-
-        <section className="border-x border-y border-stone-200 w-full px-6 lg:px-16 py-16 flex flex-row gap-0 h-min justify-center max-w-6xl mx-auto relative">
+    <ProjectLayout projectId={2}>
+      <div id="projectData">
+      <section className="border-x border-y border-stone-200 w-full px-6 lg:px-16 py-16 flex flex-row gap-0 h-min justify-center max-w-6xl mx-auto relative">
           <BgPattern />
           <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 items-stretch relative">
             <Card
@@ -163,15 +138,19 @@ export default function FullGap() {
             <div className="flex flex-col">
               <h4>Problem Statement</h4>
               <p>
-                Nigeria&lsquo;s budget process was drowning in decentralised
-                data, outdated manual workflows, and slow approvals — leading to
-                inefficiencies, corruption risks, and a ₦5.60 trillion deficit
-                in 2021.
+                Nigeria&apos;s ₦5.60 trillion budget deficit in 2021 wasn&apos;t
+                just a number—it was a symptom of a deeply broken system. The
+                public finance process was trapped in a cycle of manual
+                handoffs, decentralized data, and painfully slow approvals. This
+                created a breeding ground for inefficiency and eroded public
+                trust, making it impossible to track spending or ensure
+                accountability.
               </p>
               <p>
-                Side-by-side Before vs. After workflow diagrams: Before: messy
-                arrows, paper icons, Excel icons. After: clean linear timeline
-                with approval icons.
+                The core challenge was clear: How might we replace a system of
+                opaque, manual workflows with a transparent, automated platform
+                that empowers civil servants and restores trust in public
+                finance?
               </p>
             </div>
           </div>
@@ -179,133 +158,53 @@ export default function FullGap() {
 
         <Divider />
 
-        <section className=" border-x border-stone-200 w-full px-6 lg:px-56 pt-16 pb-12 flex flex-row gap-0 h-min justify-center max-w-6xl mx-auto relative">
-          <div className="w-full flex flex-row justify-start relative">
+        <section className="border-x border-stone-200 w-full px-6 py-16 flex flex-col gap-0 h-min justify-center max-w-6xl mx-auto relative">
+          <div className="flex flex-col gap-6 w-full lg:px-48">
             <div className="flex flex-col">
               <h4>Research & Discovery</h4>
-              <div className="mb-4">
-                <p>
-                  I began with comprehensive interviews and field surveys across
-                  two states. Through these sessions, I mapped user workflows,
-                  pain points, emotions and timeframes, and created a process
-                  flowchart to visualise interactions.
-                </p>
-                <div className="mb-12 flex flex-col gap-16">
-                  <Image
-                    src="/assets/prowoks/pw-process-flow.png"
-                    alt="Process Flow"
-                    width={1000}
-                    height={1000}
-                  />
-                  <Image
-                    src="/assets/prowoks/pw-persona.png"
-                    alt="Process Flow"
-                    width={1000}
-                    height={1000}
-                  />
-                </div>
-                <div className="border-l-2 border-green-500 pl-4">
-                  <div className="text-green-600 mb-2 font-semibold">
-                    Key findings
-                  </div>
-                  <ul className="*:mb-3">
-                    <li>
-                      <strong>User Roles</strong> – three primary groups were
-                      identified: Administrators, Actors and Moderators.
-                      Administrators configure statewide processes, Actors
-                      complete day‑to‑day tasks, and Moderators oversee
-                      activities within their ministries.
-                    </li>
-                    <li>
-                      <strong>Actor Sub‑roles</strong> – to reflect the
-                      diversity of responsibilities, the Actor role was
-                      subdivided into{" "}
-                      <strong>
-                        Initiators, Authors, Directors, Supervisor Officers and
-                        Accounting Officers
-                      </strong>
-                      . This ensured the system could assign appropriate
-                      permissions and workflows.
-                    </li>
-                    <li>
-                      <strong>Process pain points</strong> – interviews
-                      highlighted long approval times, duplication of
-                      documentation and difficulty reconciling ledgers.
-                      Stakeholders expressed frustration with the opaque nature
-                      of budget preparation.
-                    </li>
-                  </ul>
-                </div>
-              </div>
+              <p>
+                I began with comprehensive interviews and field surveys across
+                two states. Through these sessions, I mapped user workflows,
+                pain points, emotions and timeframes, and created a process
+                flowchart to visualise interactions.
+              </p>
             </div>
           </div>
-        </section>
 
-        {/* <Divider /> */}
-
-        <section className="hidden border-x border-stone-200 w-full px-6 lg:px-56 pt-16 pb-12 flex flex-row gap-0 h-min justify-center max-w-6xl mx-auto relative">
-          <div className="w-full flex flex-row justify-start relative">
-            <div className="flex flex-col">
-              <h4>Research and Insights</h4>
-              <div className="mb-4">
-                <strong>Field Research and User Interviews</strong>
-                <ul className="list-disc pl-6 *:mb-3">
-                  <li>2 States, 23 MDAs, 53 Participants, over 5.5 Weeks</li>
-                  <li>
-                    Conducted deep-dive interviews and field surveys to
-                    understand task flows, emotional bottlenecks, and
-                    administrative pressures.
-                  </li>
-                </ul>
-              </div>
-              <div className="mb-4">
-                <strong>Identified Personas</strong>
-                <ul className="list-disc pl-6 *:mb-3">
-                  <li>
-                    <strong>Administrators</strong> – Configure and oversee
-                    system-wide processes.
-                  </li>
-                  <li>
-                    <strong>Moderators</strong> – Manage intra-MDA activities
-                    and validations.
-                  </li>
-                  <li>
-                    <div className="">
-                      <strong>Actors</strong> – Execute daily financial tasks;
-                      further subdivided into:
-                      <ul className="list-disc pl-6 *:mb-3">
-                        <li>
-                          <i>Initiators</i> – Launch financial actions (e.g.,
-                          budget entry)
-                        </li>
-                        <li>
-                          <i>Authors</i> – Draft financial documents
-                        </li>
-                        <li>
-                          <i>Directors</i> – Approve or return submissions
-                        </li>
-                        <li>
-                          <i>Supervisory Officers</i> – Review workflows
-                        </li>
-                        <li>
-                          <i>Accounting Officers</i> – Handle payments and
-                          reconciliation
-                        </li>
-                      </ul>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-              <div className="">
-                <strong>Key Insight</strong>
-                <p>
-                  A flexible, role-based interface was needed to accommodate
-                  workflow variations across states and MDAs, while unifying
-                  data access and task visibility.
-                </p>
-              </div>
+          <div className="flex flex-col gap-6 w-full lg:px-48 mt-16">
+            <div className="max-w-md">
+              <p className="font-semibold">Navigating the journey from design to prototype</p>
             </div>
           </div>
+
+          <div className="my-12">
+            <Image
+              src="/assets/prowoks/processFlow.svg"
+              alt="Project Creation"
+              width={1600}
+              height={400}
+              quality={100}
+              fetchPriority="high"
+            />
+          </div>
+
+          <div className="flex flex-col gap-6 w-full lg:px-48 mt-16">
+            <div className="max-w-md">
+            <p className="font-semibold">Mapping the current activity processes and finding the North Star!</p>
+            </div>
+          </div>
+          <div className="my-12">
+            <Image
+              src="/assets/prowoks/flowChart.svg"
+              alt="Project Creation"
+              width={1600}
+              height={400}
+              quality={100}
+              fetchPriority="high"
+            />
+          </div>
+
+          <KeyFindings title="My key findings" items={findings} />
         </section>
 
         <Divider />
@@ -425,16 +324,7 @@ export default function FullGap() {
             </div>
           </div>
         </section>
-
-        {/* PostNavigation Component */}
-        <ProjectNavigation currentId={2} introData={introData} />
-
-        <Divider />
-
-        {/* CALL TO ACTION SECTION */}
-        <FooterCTA />
-        <Divider />
-      </main>
-    </div>
+      </div>
+    </ProjectLayout>
   );
 }

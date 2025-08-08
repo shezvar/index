@@ -40,7 +40,8 @@ export default async function Projects() {
                   description={item.description || ''}
                   link={item.link || ''}
                   highlightWord={item.highlightWord}
-                  comingSoon={item.comingSoon || false} // Pass the comingSoon prop
+                  comingSoon={item.comingSoon || false}
+                  isLock={item.isLock || false} // Add this line
                 />
               ))}
             </div>

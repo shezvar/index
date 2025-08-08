@@ -11,7 +11,7 @@ export function Footer() {
   };
 
   return (
-    <footer className="w-full py-8 flex gap-2 mt-8 justify-between max-w-6xl mx-auto">
+    <footer className="w-full py-8 px-6 flex gap-2 mt-8 justify-between max-w-6xl mx-auto">
       
       <div className="">
         <div className="flex gap-4 mb-2">

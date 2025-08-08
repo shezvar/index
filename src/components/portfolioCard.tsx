@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Card } from "./card";
 import React from "react";
+import { Lock } from "lucide-react";
 
 interface ProjectCardProps {
   image: string;
@@ -10,7 +11,8 @@ interface ProjectCardProps {
   link: string;
   bgColor?: string;
   highlightWord?: string;
-  comingSoon?: boolean; // Add this line
+  comingSoon?: boolean;
+  isLock?: boolean; // Add this line
 }
 
 function highlightWord(
@@ -37,7 +39,8 @@ export function ProjectItem({
   link,
   bgColor = "white",
   highlightWord: highlight,
-  comingSoon = false, // Add this line and set default
+  comingSoon = false,
+  isLock = false, // Add this line and set default
 }: ProjectCardProps) {
   return (
     <Card
@@ -59,15 +62,19 @@ export function ProjectItem({
               Coming Soon
             </span>
           )}
+          {/* Conditionally render the "Locked" badge */}
+          {isLock && (
+            <span className="absolute top-2 right-2 text-xs bg-stone-600 px-2 py-1 rounded-md text-stone-100 font-semibold flex items-center gap-1">
+              <Lock size={12} />
+              Locked
+            </span>
+          )}
           <Image
             src={image}
             alt={title}
             width={600}
             height={400}
             quality={70}
-            loading="lazy"
-            draggable={false}
-            unoptimized={true}
             fetchPriority="high"
             className="object-contain group-hover:scale-105 transition-transform duration-300"
             style={{

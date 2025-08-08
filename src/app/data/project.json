@@ -8,7 +8,8 @@
     "description": "Fullgap’s new digital experience is seamless, personalised, and designed to align with consultants and small teams who continually embrace the future.",
     "link": "/projects/fullgap",
     "highlightWord": "Product Management",
-    "tags": ["Project Management", "Invoicing", "Contract Management"]
+    "tags": ["Project Management", "Invoicing", "Contract Management"],
+    "isLock": false
   },
   {
     "id": 2,
@@ -19,18 +20,20 @@
     "description": "How a human-centered enterprise platform transformed budget governance in 3+ Nigerian states",
     "link": "/projects/prowoks",
     "highlightWord": "State Budget System",
-    "tags": ["Budget Management", "Workflow", "Reconciliation"]
+    "tags": ["Budget Management", "Workflow", "Reconciliation"],
+    "isLock": false
   },
   {
     "id": 3,
-    "src": "/assets/dtalearner/dta-cover.png",
+    "src": "/assets/dtalearner/fme-cover.png",
     "alt": "FME-DTA Learner Platform",
     "type": "Case Study",
     "title": "FME Digital Training Academy: Empowering 20,000 Nigerian Learners",
     "description": "A personalized learning platform that bridges the digital skills gap through blended learning and real-time support",
     "link": "/projects/dtalearner",
     "highlightWord": "Digital Training Academy",
-    "tags": ["Learning Platform", "UX Research"]
+    "tags": ["Learning Platform", "UX Research"],
+    "isLock": true
   },
   {
     "id": 4,
@@ -42,7 +45,8 @@
     "link": "/projects/dtaadmin",
     "highlightWord": "Admin Platform",
     "tags": ["Admin Dashboard", "Data Analytics", "API Integration"],
-    "comingSoon": true 
+    "comingSoon": true,
+    "isLock": false
 
   },
   {
@@ -54,7 +58,8 @@
     "description": "An all-in-one platform integrating POS, loyalty programs, and analytics for streamlined business management",
     "link": "/projects/loystar",
     "highlightWord": "E-commerce Platform",
-    "tags": ["E-commerce", "POS System", "Loyalty Program"]
+    "tags": ["E-commerce", "POS System", "Loyalty Program"],
+    "isLock": false
   },
   {
     "id": 6,
@@ -65,6 +70,7 @@
     "description": "A comprehensive digital platform serving millions of Nigerians with government energy subsidies",
     "link": "/projects/esp",
     "highlightWord": "Energy Subsidy Programme",
-    "tags": ["Government Services", "Offline-First", "Multi-Stakeholder"]
+    "tags": ["Government Services", "Offline-First", "Multi-Stakeholder"],
+    "isLock": false
   }
 ]

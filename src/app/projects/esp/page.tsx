@@ -1,84 +1,16 @@
 "use client";
 import { Card } from "@/components/card";
 import { BriefcaseBusiness, Users, MonitorSmartphone, Calendar } from "lucide-react";
-import Image from "next/image";
 import { Divider } from "@/components/divider";
 import { BgPattern } from "@/components/bgPattern";
-import { FooterCTA } from "@/components/footerCTA";
-import ProjectBackButton from "@/components/ProjectBackButton";
-import introData from "@/app/data/project.json";
-import ProjectNavigation from "@/components/projectNavigation";
 import { SingleImageView } from "@/components/singleImageViewer";
+import ProjectLayout from "../ProjectLayout";
 
 export default function Esp() {
   return (
-    <div className="min-h-screen flex flex-col w-full">
-      <main className="flex w-full flex-col flex-nowrap gap-0 relative p-0 justify-center min-h-0">
-        {/* HERO SECTION */}
-
-        <section
-          className="py-10 w-full border-x border-stone-200 max-w-6xl mx-auto relative"
-          id="hero"
-        ></section>
-
-        <section className="border-x border-stone-200 w-full px-3 pt-16 flex flex-col gap-0 h-min max-w-6xl mx-auto relative group/sideCard">
-          <div className="lg:px-4">
-            <ProjectBackButton />
-          </div>
-          {introData
-            .filter((item) => item.id === 6)
-            .map((item) => (
-              <div
-                key={item.title}
-                className="w-full flex flex-col items-center justify-center"
-              >
-                <div className="mb-8 max-w-[66rem] mx-auto relative">
-                  <h2 className="text-3xl md:text-[3rem] font-thin text-stone-900 leading-[1.3] mb-4">
-                    {item.title}
-                  </h2>
-                  <p className="text-stone-700 text-xl mb-4">
-                    {item.description}
-                  </p>
-                  <div className="w-full">
-                    <div className="flex flex-wrap gap-2 mt-4">
-                      {item.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="text-stone-800 uppercase text-xs bg-white px-3 py-1 rounded-lg border border-stone-200"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-
-                <div className="relative rounded-2xl flex items-center justify-center overflow-hidden h-[40rem] w-full bg-white mt-6 shadow-md border border-stone-400">
-                  <Image
-                    src={item.src}
-                    alt={item.title}
-                    width={600}
-                    height={400}
-                    className="object-contain"
-                    style={{
-                      display: "block",
-                      width: "100%",
-                      height: "100%",
-                      objectPosition: "center",
-                      objectFit: "cover",
-                      maxHeight: "100%",
-                      maxWidth: "100%",
-                      imageRendering: "crisp-edges",
-                    }}
-                  />
-                </div>
-              </div>
-            ))}
-        </section>
-
-        <Divider />
-
-        <section className="border-x border-y border-stone-200 w-full px-6 lg:px-16 py-16 flex flex-row gap-0 h-min justify-center max-w-6xl mx-auto relative">
+    <ProjectLayout projectId={6}>
+      <div id="projectData">
+      <section className="border-x border-y border-stone-200 w-full px-6 lg:px-16 py-16 flex flex-row gap-0 h-min justify-center max-w-6xl mx-auto relative">
           <BgPattern />
           <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 items-stretch relative">
             <Card
@@ -137,29 +69,10 @@ export default function Esp() {
             <div className="flex flex-col">
               <h4>Overview</h4>
               <p>
-                In Nigeria, millions of low-income households depend on
-                government subsidies to afford basic energy needs. Yet before
-                the Energy Subsidy Programme platform existed, applying for
-                support was confusing, slow, and opaque. Beneficiaries often had
-                to travel long distances to fill out paper forms, wait weeks or
-                months without knowing if they qualified, and call or visit
-                government offices multiple times for updates.
+                Millions of individuals rely on public platforms for services, but managing these services can be complex and inefficient. Before the platform launch, applying for assistance was slow, confusing, and opaque, with beneficiaries struggling to track their status and agents overwhelmed by manual ticket handling. Administrators lacked effective tools to monitor platform activities and manage users efficiently.
               </p>
               <p>
-                Meanwhile, field agents wrestled with poor network coverage,
-                often completing paperwork twice—once on paper, then again when
-                back online. Policymakers lacked timely, accurate data to
-                monitor program performance, and call centres were overwhelmed
-                with repetitive status-check calls. The system was broken—not
-                because people didn&lsquo;t care, but because the tools
-                weren&lsquo;t designed for them.
-              </p>
-              <p>
-                As the Lead Product Designer, I was tasked with designing one
-                digital platform that could work for everyone: a grandmother in
-                a rural village, a field agent onboarding beneficiaries in
-                low-connectivity zones, and a federal analyst comparing subsidy
-                data across 36 states.
+                As the Lead Product Designer, my task was to create a platform that provided admins with an overview of activities, easy beneficiary and user management, and a streamlined support ticket system. The platform needed to automate qualification criteria, manage role-based access, and ensure beneficiaries had clear visibility of their progress, including a simplified recharge flow. The goal was to design a seamless experience for all users—admins, agents, and beneficiaries.
               </p>
             </div>
           </div>
@@ -222,20 +135,6 @@ export default function Esp() {
                   understand the real challenges faced by every role in the
                   system.
                 </p>
-                <div className="mb-12 flex flex-col gap-16">
-                  <Image
-                    src="/assets/esp/esp-research.png"
-                    alt="Field Research"
-                    width={1000}
-                    height={1000}
-                  />
-                  <Image
-                    src="/assets/esp/esp-journey.png"
-                    alt="User Journey Maps"
-                    width={1000}
-                    height={1000}
-                  />
-                </div>
                 <div className="border-l-2 border-green-500 pl-4">
                   <div className="text-green-600 mb-2 font-semibold">
                     Key research activities
@@ -405,19 +304,22 @@ export default function Esp() {
 
           <div className="grid gap-6 grid-cols-12 w-full mt-12">
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
-              <SingleImageView src="/assets/dtalearner/fme-learner-session-01.png" alt="Project Details 2" />
+              <SingleImageView src="/assets/esp/esp-dash-01.png" alt="Project Details 2" />
             </div>
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
-              <SingleImageView src="/assets/dtalearner/fme-learner-session-02.png" alt="Project Details 2" />
+              <SingleImageView src="/assets/esp/esp-dash-02.png" alt="Project Details 2" />
             </div>
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
-              <SingleImageView src="/assets/dtalearner/fme-learner-support-01.png" alt="Project Details 2" />
+              <SingleImageView src="/assets/esp/esp-dash-03.png" alt="Project Details 2" />
             </div>
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
-              <SingleImageView src="/assets/dtalearner/fme-learner-support-02.png" alt="Project Details 2" />
+              <SingleImageView src="/assets/esp/esp-dash-04.png" alt="Project Details 2" />
             </div>
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
-              <SingleImageView src="/assets/dtalearner/fme-learner-support-03.png" alt="Project Details 2" />
+              <SingleImageView src="/assets/esp/esp-dash-05.png" alt="Project Details 2" />
+            </div>
+            <div className="w-full rounded-3xl overflow-hidden col-span-12">
+              <SingleImageView src="/assets/esp/esp-dash-06.png" alt="Project Details 2" />
             </div>
           </div>
         </section>
@@ -426,69 +328,29 @@ export default function Esp() {
           <div className="flex flex-col gap-6 w-full lg:px-48">
             <div className="flex flex-col">
               <strong className="mb-4 block">
-              Adaptive Forms & Field Agent Interface
+              Support, Recharge & Registration Flow Management
               </strong>
               <p>
-                Forms now change dynamically based on responses, shortening the
-                process by up to 25% and keeping users focused. The field agent
-                interface supports offline-first workflows, allowing agents to
-                complete forms without internet and sync automatically once back
-                online, eliminating duplicate data entry.
-              </p>
-            </div>
-          </div>
-
-          <div className="grid gap-6 grid-cols-12 w-full mt-12">
-                      <div className="w-full rounded-3xl overflow-hidden col-span-12">
-                        <SingleImageView src="/assets/dtalearner/fme-learner-session-01.png" alt="Project Details 2" />
-                      </div>
-                      <div className="w-full rounded-3xl overflow-hidden col-span-12">
-                        <SingleImageView src="/assets/dtalearner/fme-learner-session-02.png" alt="Project Details 2" />
-                      </div>
-                      <div className="w-full rounded-3xl overflow-hidden col-span-12">
-                        <SingleImageView src="/assets/dtalearner/fme-learner-support-01.png" alt="Project Details 2" />
-                      </div>
-                      <div className="w-full rounded-3xl overflow-hidden col-span-12">
-                        <SingleImageView src="/assets/dtalearner/fme-learner-support-02.png" alt="Project Details 2" />
-                      </div>
-                      <div className="w-full rounded-3xl overflow-hidden col-span-12">
-                        <SingleImageView src="/assets/dtalearner/fme-learner-support-03.png" alt="Project Details 2" />
-                      </div>
-                    </div>
-        </section>
-
-        <section className="border-x border-stone-200 w-full px-6 py-16 flex flex-col gap-0 h-min justify-center max-w-6xl mx-auto relative">
-          <div className="flex flex-col gap-6 w-full lg:px-48">
-            <div className="flex flex-col">
-              <strong className="mb-4 block">
-              Analytics Dashboard & Call Center Tools
-              </strong>
-              <p>
-                Policymakers can now click a national statistic and instantly
-                see regional breakdowns, then zoom into state-level data. Call
-                center agents access unified beneficiary profiles with all
-                information in one view: application status, card details,
-                payment history, and QIS score breakdown, cutting call handling
-                time significantly.
+                Agents manage tickets with a unified view of conversations, quick access to features, and the knowledge base for efficient resolution. Beneficiaries enjoy a seamless recharge process and are guided through registration with a progress indicator.
               </p>
             </div>
           </div>
 
           <div className="grid gap-6 grid-cols-12 w-full mt-12">
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
-              <SingleImageView src="/assets/dtalearner/fme-learner-session-01.png" alt="Project Details 2" />
+              <SingleImageView src="/assets/esp/esp-supp-01.png" alt="Project Details 2" />
             </div>
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
-              <SingleImageView src="/assets/dtalearner/fme-learner-session-02.png" alt="Project Details 2" />
+              <SingleImageView src="/assets/esp/esp-supp-02.png" alt="Project Details 2" />
             </div>
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
-              <SingleImageView src="/assets/dtalearner/fme-learner-support-01.png" alt="Project Details 2" />
+              <SingleImageView src="/assets/esp/esp-supp-03.png" alt="Project Details 2" />
             </div>
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
-              <SingleImageView src="/assets/dtalearner/fme-learner-support-02.png" alt="Project Details 2" />
+              <SingleImageView src="/assets/esp/esp-supp-04.png" alt="Project Details 2" />
             </div>
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
-              <SingleImageView src="/assets/dtalearner/fme-learner-support-03.png" alt="Project Details 2" />
+              <SingleImageView src="/assets/esp/esp-supp-05.png" alt="Project Details 2" />
             </div>
           </div>
         </section>
@@ -497,33 +359,29 @@ export default function Esp() {
           <div className="flex flex-col gap-6 w-full lg:px-48">
             <div className="flex flex-col">
               <strong className="mb-4 block">
-              Mobile Responsive & Offline Capabilities
+              Optimizing Beneficiary Tracking and Incentive Distribution
               </strong>
               <p>
-                The platform is fully responsive and designed for offline-first
-                operation, ensuring it works seamlessly across all devices and
-                network conditions. The interface maintains functionality even
-                in low-connectivity areas, with automatic synchronization when
-                connectivity is restored.
+                Admins and support agents can track beneficiary and agent activities through a comprehensive table with detailed profiles, while also using an intuitive drag-and-drop interface to create incentive distribution mechanics, run simulations, and assess impact rates, streamlining workflows and optimizing decision-making.
               </p>
             </div>
           </div>
 
           <div className="grid gap-6 grid-cols-12 w-full mt-12">
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
-              <SingleImageView src="/assets/dtalearner/fme-learner-session-01.png" alt="Project Details 2" />
+              <SingleImageView src="/assets/esp/esp-sett-01.png" alt="Project Details 2" />
             </div>
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
-              <SingleImageView src="/assets/dtalearner/fme-learner-session-02.png" alt="Project Details 2" />
+              <SingleImageView src="/assets/esp/esp-sett-02.png" alt="Project Details 2" />
             </div>
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
-              <SingleImageView src="/assets/dtalearner/fme-learner-support-01.png" alt="Project Details 2" />
+              <SingleImageView src="/assets/esp/esp-sett-03.png" alt="Project Details 2" />
             </div>
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
-              <SingleImageView src="/assets/dtalearner/fme-learner-support-02.png" alt="Project Details 2" />
+              <SingleImageView src="/assets/esp/esp-sett-04.png" alt="Project Details 2" />
             </div>
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
-              <SingleImageView src="/assets/dtalearner/fme-learner-support-03.png" alt="Project Details 2" />
+              <SingleImageView src="/assets/esp/esp-sett-05.png" alt="Project Details 2" />
             </div>
           </div>
         </section>
@@ -580,16 +438,7 @@ export default function Esp() {
             </div>
           </div>
         </section>
-
-        {/* PostNavigation Component */}
-        <ProjectNavigation currentId={6} introData={introData} />
-
-        <Divider />
-
-        {/* CALL TO ACTION SECTION */}
-        <FooterCTA />
-        <Divider />
-      </main>
-    </div>
+      </div>
+    </ProjectLayout>
   );
 } 

@@ -4,80 +4,49 @@ import { BriefcaseBusiness, Users, MonitorSmartphone, Calendar } from "lucide-re
 import Image from "next/image";
 import { Divider } from "@/components/divider";
 import { BgPattern } from "@/components/bgPattern";
-import { FooterCTA } from "@/components/footerCTA";
-import ProjectBackButton from "@/components/ProjectBackButton";
-import introData from "@/app/data/project.json";
-import ProjectNavigation from "@/components/projectNavigation";
 import { SingleImageView } from "@/components/singleImageViewer";
+import ProjectLayout from "../ProjectLayout";
+import { KeyFindings } from "@/components/KeyFindings";
 
 export default function Loystar() {
+  const findings = [
+    {
+      title: "Simplicity Over Complexity",
+      description: (
+        <>
+          Business owners are time-poor and require a platform that is easy to use and doesn&apos;t need excessive training. The interface must be clean and straightforward.
+        </>
+      ),
+    },
+    {
+      title: "Flexible Payment UI",
+      description: (
+        <>
+          The interface needs to handle multiple payment methods seamlessly, from cash and contactless to gift cards and loyalty points, with intuitive cart management.
+        </>
+      ),
+    },
+    {
+      title: "Efficient Cart Management",
+      description: (
+        <>
+          Business owners need quick, intuitive ways to add products, apply discounts, and manage complex scenarios like split payments and back-dated sales.
+        </>
+      ),
+    },
+    {
+      title: "Service Business Workflows",
+      description: (
+        <>
+          Many businesses need appointment booking, bundled products, and specialized interfaces that existing platforms don&apos;t handle well.
+        </>
+      ),
+    },
+  ];
+
   return (
-    <div className="min-h-screen flex flex-col w-full">
-      <main className="flex w-full flex-col flex-nowrap gap-0 relative p-0 justify-center min-h-0">
-        {/* HERO SECTION */}
-
-        <section
-          className="py-10 w-full border-x border-stone-200 max-w-6xl mx-auto relative"
-          id="hero"
-        ></section>
-
-        <section className="border-x border-stone-200 w-full px-3 pt-16 flex flex-col gap-0 h-min max-w-6xl mx-auto relative group/sideCard">
-          <div className="lg:px-4">
-            <ProjectBackButton />
-          </div>
-          {introData
-            .filter((item) => item.id === 5)
-            .map((item) => (
-              <div
-                key={item.title}
-                className="w-full flex flex-col items-center justify-center"
-              >
-                <div className="mb-8 max-w-[66rem] mx-auto relative">
-                  <h2 className="text-3xl md:text-[3rem] font-thin text-stone-900 leading-[1.3] mb-4">
-                    {item.title}
-                  </h2>
-                  <p className="text-stone-700 text-xl mb-4">
-                    {item.description}
-                  </p>
-                  <div className="w-full">
-                    <div className="flex flex-wrap gap-2 mt-4">
-                      {item.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="text-stone-800 uppercase text-xs bg-white px-3 py-1 rounded-lg border border-stone-200"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-
-                <div className="relative rounded-2xl flex items-center justify-center overflow-hidden h-[40rem] w-full bg-white mt-6 shadow-md border border-stone-400">
-                  <Image
-                    src={item.src}
-                    alt={item.title}
-                    width={600}
-                    height={400}
-                    className="object-contain"
-                    style={{
-                      display: "block",
-                      width: "100%",
-                      height: "100%",
-                      objectPosition: "center",
-                      objectFit: "cover",
-                      maxHeight: "100%",
-                      maxWidth: "100%",
-                      imageRendering: "crisp-edges",
-                    }}
-                  />
-                </div>
-              </div>
-            ))}
-        </section>
-
-        <Divider />
-
+    <ProjectLayout projectId={5}>
+      <div id="projectData">
         <section className="border-x border-y border-stone-200 w-full px-6 lg:px-16 py-16 flex flex-row gap-0 h-min justify-center max-w-6xl mx-auto relative">
           <BgPattern />
           <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 items-stretch relative">
@@ -210,65 +179,20 @@ export default function Loystar() {
 
         <Divider />
 
-        <section className=" border-x border-stone-200 w-full px-6 lg:px-56 pt-16 pb-12 flex flex-row gap-0 h-min justify-center max-w-6xl mx-auto relative">
-          <div className="w-full flex flex-row justify-start relative">
+        <section className="border-x border-stone-200 w-full px-6 py-16 flex flex-col gap-0 h-min justify-center max-w-6xl mx-auto relative">
+          <div className="flex flex-col gap-6 w-full lg:px-48">
             <div className="flex flex-col">
               <h4>Research & Discovery</h4>
-              <div className="mb-4">
-                <p>
-                  I began with comprehensive user research to understand the
-                  real-world problems faced by small business owners. Through
-                  interviews, surveys, and competitive analysis, I identified
-                  key insights that would shape the design strategy.
-                </p>
-                <div className="mb-12 flex flex-col gap-16">
-                  <Image
-                    src="/assets/loystar/ls-personas.png"
-                    alt="User Personas"
-                    width={1000}
-                    height={1000}
-                  />
-                  <Image
-                    src="/assets/loystar/ls-competitive.png"
-                    alt="Competitive Analysis"
-                    width={1000}
-                    height={1000}
-                  />
-                </div>
-                <div className="border-l-2 border-green-500 pl-4">
-                  <div className="text-green-600 mb-2 font-semibold">
-                    Key findings
-                  </div>
-                  <ul className="*:mb-3">
-                    <li>
-                      <strong>Simplicity Over Complexity</strong> – Business
-                      owners are time-poor and require a platform that is easy
-                      to use and doesn&lsquo;t need excessive training. The
-                      interface must be clean and straightforward.
-                    </li>
-                    <li>
-                      <strong>Flexible Payment UI</strong> – The interface needs
-                      to handle multiple payment methods seamlessly, from cash
-                      and contactless to gift cards and loyalty points, with
-                      intuitive cart management.
-                    </li>
-                    <li>
-                      <strong>Efficient Cart Management</strong> – Business
-                      owners need quick, intuitive ways to add products, apply
-                      discounts, and manage complex scenarios like split
-                      payments and back-dated sales.
-                    </li>
-                    <li>
-                      <strong>Service Business Workflows</strong> – Many
-                      businesses need appointment booking, bundled products, and
-                      specialized interfaces that existing platforms don&lsquo;t
-                      handle well.
-                    </li>
-                  </ul>
-                </div>
-              </div>
+              <p>
+                I began with comprehensive user research to understand the
+                real-world problems faced by small business owners. Through
+                interviews, surveys, and competitive analysis, I identified key
+                insights that would shape the design strategy.
+              </p>
             </div>
           </div>
+
+          <KeyFindings title="Key Findings" items={findings} />
         </section>
 
         <Divider />
@@ -383,7 +307,7 @@ export default function Loystar() {
           <div className="flex flex-col gap-6 w-full lg:px-48">
             <div className="flex flex-col">
               <strong className="mb-4 block">
-              Intuitive Cart Management & POS Interface
+                Intuitive Cart Management & POS Interface
               </strong>
               <p>
                 The POS system was redesigned to be clutter-free and
@@ -398,19 +322,34 @@ export default function Loystar() {
 
           <div className="grid gap-6 grid-cols-12 w-full mt-12">
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
-              <SingleImageView src="/assets/loystar/lst-pos-01.png" alt="Project Details 2" />
+              <SingleImageView
+                src="/assets/loystar/lst-pos-01.png"
+                alt="Project Details 2"
+              />
             </div>
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
-              <SingleImageView src="/assets/loystar/lst-pos-02.png" alt="Project Details 2" />
+              <SingleImageView
+                src="/assets/loystar/lst-pos-02.png"
+                alt="Project Details 2"
+              />
             </div>
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
-              <SingleImageView src="/assets/loystar/lst-pos-03.png" alt="Project Details 2" />
+              <SingleImageView
+                src="/assets/loystar/lst-pos-03.png"
+                alt="Project Details 2"
+              />
             </div>
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
-              <SingleImageView src="/assets/loystar/lst-pos-04.png" alt="Project Details 2" />
+              <SingleImageView
+                src="/assets/loystar/lst-pos-04.png"
+                alt="Project Details 2"
+              />
             </div>
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
-              <SingleImageView src="/assets/loystar/lst-pos-05.png" alt="Project Details 2" />
+              <SingleImageView
+                src="/assets/loystar/lst-pos-05.png"
+                alt="Project Details 2"
+              />
             </div>
           </div>
         </section>
@@ -419,7 +358,7 @@ export default function Loystar() {
           <div className="flex flex-col gap-6 w-full lg:px-48">
             <div className="flex flex-col">
               <strong className="mb-4 block">
-              Flexible Payment Methods & Customer Management
+                Flexible Payment Methods & Customer Management
               </strong>
               <p>
                 The payment interface was designed to handle multiple payment
@@ -434,16 +373,28 @@ export default function Loystar() {
 
           <div className="grid gap-6 grid-cols-12 w-full mt-12">
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
-              <SingleImageView src="/assets/loystar/lst-pay-01.png" alt="Project Details 2" />
+              <SingleImageView
+                src="/assets/loystar/lst-pay-01.png"
+                alt="Project Details 2"
+              />
             </div>
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
-              <SingleImageView src="/assets/loystar/lst-pay-02.png" alt="Project Details 2" />
+              <SingleImageView
+                src="/assets/loystar/lst-pay-02.png"
+                alt="Project Details 2"
+              />
             </div>
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
-              <SingleImageView src="/assets/loystar/lst-pay-03.png" alt="Project Details 2" />
+              <SingleImageView
+                src="/assets/loystar/lst-pay-03.png"
+                alt="Project Details 2"
+              />
             </div>
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
-              <SingleImageView src="/assets/loystar/lst-pay-04.png" alt="Project Details 2" />
+              <SingleImageView
+                src="/assets/loystar/lst-pay-04.png"
+                alt="Project Details 2"
+              />
             </div>
           </div>
         </section>
@@ -451,9 +402,7 @@ export default function Loystar() {
         <section className="border-x border-stone-200 w-full px-6 pt-16 flex flex-col gap-0 h-min justify-center max-w-6xl mx-auto relative">
           <div className="flex flex-col gap-6 w-full lg:px-48">
             <div className="flex flex-col">
-              <strong className="mb-4 block">
-              Prototype
-              </strong>
+              <strong className="mb-4 block">Prototype</strong>
               <p>
                 View selected screens from the Loystar prototype to see how the
                 design comes together. The prototype showcases the intuitive
@@ -464,15 +413,10 @@ export default function Loystar() {
 
           <div className="flex flex-col gap-6 w-full">
             <div className="flex flex-col">
-                <video
-                  className="rounded-3xl"
-                  controls
-                  preload="true"
-                  loop
-                >
-                  <source src="/assets/loystar/processes.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
+              <video className="rounded-3xl" controls preload="true" loop>
+                <source src="/assets/loystar/processes.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
           </div>
         </section>
@@ -524,16 +468,7 @@ export default function Loystar() {
             </div>
           </div>
         </section>
-
-        {/* PostNavigation Component */}
-        <ProjectNavigation currentId={5} introData={introData} />
-
-        <Divider />
-
-        {/* CALL TO ACTION SECTION */}
-        <FooterCTA />
-        <Divider />
-      </main>
-    </div>
+      </div>
+    </ProjectLayout>
   );
 } 
