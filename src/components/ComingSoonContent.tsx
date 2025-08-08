@@ -1,7 +1,4 @@
 import React from "react";
-import { Clock, Sparkles, ArrowLeft } from "lucide-react";
-import { Button } from "./buttons";
-import Link from "next/link";
 
 export function ComingSoon() {
   return (

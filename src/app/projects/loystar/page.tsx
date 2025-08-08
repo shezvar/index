@@ -1,7 +1,6 @@
 "use client";
 import { Card } from "@/components/card";
 import { BriefcaseBusiness, Users, MonitorSmartphone, Calendar } from "lucide-react";
-import Image from "next/image";
 import { Divider } from "@/components/divider";
 import { BgPattern } from "@/components/bgPattern";
 import { SingleImageView } from "@/components/singleImageViewer";
