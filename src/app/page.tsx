@@ -91,7 +91,7 @@ export default function Home() {
             </h2>
             <p className="text-stone-700 text-lg mt-6">
               Product Designer (UI/UX) with over a decade of experience in end-to-end
-              experiences for both business and consumer applications.
+              design and research for both business and consumer applications.
             </p>
           </div>
         </section>
