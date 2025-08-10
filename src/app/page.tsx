@@ -90,7 +90,7 @@ export default function Home() {
               Hey, I&apos;m Segun Oroyo
             </h2>
             <p className="text-stone-700 text-lg mt-6">
-              Product Designer (UI/UX) with 7+ years of experience in end-to-end
+              Product Designer (UI/UX) with over a decade of experience in end-to-end
               experiences for both business and consumer applications.
             </p>
           </div>
@@ -110,7 +110,7 @@ export default function Home() {
               <div className="flex flex-col w-full">
                 <WandSparkles className="size-6 mb-4" />
                 <span className="text-base">
-                  A generalist that builds using AI
+                  A generalist that collaborates with AI
                 </span>
               </div>
             </Card>
