@@ -27,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" cz-shortcut-listen="true">
+    <html lang="en" suppressHydrationWarning={true}>
       <head>
         {/* Preload critical images */}
         <link rel="preload" href="/assets/hero-image.png" as="image" />
