@@ -5,13 +5,12 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   // DO NOT static-export on Vercel; keep SSR/SSG so Image Optimization works
-  // output: 'export',    <-- remove this
-  // distDir: 'dist',     <-- optional; Vercel doesn't need it
+  output: 'export',
   trailingSlash: false,   // optional; don’t force extra redirects
 
   images: {
     // IMPORTANT: let Next optimize images on Vercel
-    // unoptimized: true, <-- REMOVE THIS
+    unoptimized: true,
     formats: ["image/avif", "image/webp"],
 
     // Trim sizes to what your layout actually needs
