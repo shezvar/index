@@ -10,6 +10,7 @@ import {
   Users,
 } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { Divider } from "@/components/divider";
 import { BgPattern } from "@/components/bgPattern";
 import { FooterCTA } from "@/components/footerCTA";
@@ -193,11 +194,11 @@ export default function Home() {
                 ))}
             </div>
             <div className="pt-8 flex justify-center w-full relative">
-              <a href="/projects" className="w-full">
+              <Link href="/projects" className="w-full">
                 <Button variant="secondary" size="md" className="w-full">
                   View All Projects
                 </Button>
-              </a>
+              </Link>
             </div>
           </div>
         </section>
