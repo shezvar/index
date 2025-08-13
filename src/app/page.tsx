@@ -44,7 +44,8 @@ export default function Home() {
                   alt="Segun Oroyo"
                   width={400}
                   height={400}
-                  loading="lazy"
+                  priority
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="rounded-full object-cover ml-auto"
                 />
               </div>
@@ -62,6 +63,7 @@ export default function Home() {
                   width={400}
                   height={400}
                   loading="lazy"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="rounded-full object-cover ml-auto"
                 />
               </div>
@@ -79,6 +81,7 @@ export default function Home() {
                   width={400}
                   height={400}
                   loading="lazy"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="rounded-full object-cover ml-auto"
                 />
               </div>

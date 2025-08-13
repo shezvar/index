@@ -104,18 +104,15 @@ export function FooterCTA() {
       {/* Right: SVG Illustration */}
       <div className="flex items-center justify-center w-full h-full mt-8 md:mt-0">
         <div className="">
-          <Image
-            src="/assets/pencilstyleimage.png"
-            alt="Call to Action Illustration"
-            width={500}
-            height={500}
-            quality={100}
-            loading="lazy"
-            draggable={false}
-            unoptimized={true}
-            fetchPriority="high"
-            className="w-full h-auto object-contain"
-          />
+        <Image
+          src="/assets/pencilstyleimage.png"
+          alt="A decorative pencil-style image" // Or a more descriptive alt text
+          width={800}  // Replace with the actual image width
+          height={600} // Replace with the actual image height
+          sizes="(max-width: 768px) 100vw, 50vw"
+          loading="lazy"
+          className="your-existing-classes" // Keep any existing classes
+        />
         </div>
       </div>
     </Card>
