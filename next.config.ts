@@ -2,6 +2,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  distDir: 'dist',
   reactStrictMode: true,
 
   // DO NOT static-export on Vercel; keep SSR/SSG so Image Optimization works
