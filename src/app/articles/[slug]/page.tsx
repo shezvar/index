@@ -1,5 +1,13 @@
 import { notFound } from 'next/navigation';
 
+type Props = {
+  params: { slug: string };
+  searchParams: { [key: string]: string | string[] | undefined };
+};
+
+
+
+
 export async function generateStaticParams() {
   try {
     const response = await strapi.get<{ data: Article[] }>('/api/articles');
@@ -38,7 +46,7 @@ async function getArticle(slug: string): Promise<Article | null> {
   }
 }
 
-export default async function ArticlePage({ params }: { params: { slug: string } }) {
+export default async function ArticlePage({ params }: Props) {
   const article = await getArticle(params.slug);
 
   if (!article) {
