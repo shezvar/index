@@ -5,6 +5,7 @@ import { Footer } from "@/components/footer";
 import { HeaderMain } from "@/components/header";
 import { Analytics } from "@vercel/analytics/next"
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import ImageAlert from "@/components/alerts";
 
 const manrope = Manrope({
   subsets: ['latin'],
@@ -27,11 +28,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" cz-shortcut-listen="true">
+    <html lang="en" suppressHydrationWarning={true}>
       <head>
         {/* Preload critical images */}
-        <link rel="preload" href="/assets/hero-image.png" as="image" />
-        <link rel="preload" href="/assets/pencilstyleimage.png" as="image" />
+
+
         
         {/* DNS prefetch for external resources */}
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
@@ -51,6 +52,7 @@ export default function RootLayout({
         <Footer />
         <Analytics />
         <SpeedInsights />
+        <ImageAlert />
       </body>
     </html>
   );

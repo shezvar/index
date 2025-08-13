@@ -1,51 +1,49 @@
+// next.config.ts
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: 'export', // Enable static exports for CloudFlare Workers
-  distDir: 'dist', // Output to dist directory
-  trailingSlash: true, // Required for static hosting
+  reactStrictMode: true,
+  swcMinify: true,
+  // DO NOT static-export on Vercel; keep SSR/SSG so Image Optimization works
+  // output: 'export',    <-- remove this
+  // distDir: 'dist',     <-- optional; Vercel doesn't need it
+  trailingSlash: false,   // optional; don’t force extra redirects
+
   images: {
-    unoptimized: true, // Required for static export
-    formats: ['image/webp', 'image/avif'],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    minimumCacheTTL: 60 * 60 * 24 * 30, // 30 days
-    dangerouslyAllowSVG: true,
-    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+    // IMPORTANT: let Next optimize images on Vercel
+    // unoptimized: true, <-- REMOVE THIS
+    formats: ["image/avif", "image/webp"],
+
+    // Trim sizes to what your layout actually needs
+    deviceSizes: [360, 640, 768, 1024, 1280, 1536, 1920],
+    imageSizes: [64, 128, 256, 384, 512, 768],
+
+    // If you load from a CMS/CDN, allow it here
     remotePatterns: [
-      {
-        protocol: "http",
-        hostname: "localhost",
-        port: "8888",
-        pathname: "/wordpress-backend/**",
-      },
+      // { protocol: "https", hostname: "images.unsplash.com" },
+      // { protocol: "https", hostname: "your-cms.example.com" },
     ],
+
+    // Optional: let Vercel cache optimized results longer
+    minimumCacheTTL: 60 * 60 * 24 * 30, // 30 days
+    // Note: dangerouslyAllowSVG is NOT a field under images in Next config.
   },
+
+  // Good hygiene
   compress: true,
   poweredByHeader: false,
+
+  // Add long-term cache headers for /public assets (icons, bg textures, etc.)
+  async headers() {
+    return [
+      {
+        source: "/:all*(svg|jpg|jpeg|png|gif|webp|avif|ico|ttf|otf|woff|woff2)",
+        headers: [
+          { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
+        ],
+      },
+    ];
+  },
 };
 
 export default nextConfig;
-
-// const isGithubActions = process.env.GITHUB_ACTIONS || false;
-
-// /** @type {import('next').NextConfig} */
-// const nextConfig = {
-//   reactStrictMode: true,
-//   assetPrefix: isGithubActions ? '/shezvar.github.io/index' : '', // Update with your repo name
-//   basePath: isGithubActions ? '/shezvar.github.io/index' : '', // Update with your repo name
-//   trailingSlash: true, // Add this line
-//   distDir: 'docs', // Output directory for GitHub Pages
-//   // ... other configurations
-// };
-
-// module.exports = nextConfig;
-
-// /** @type {import('next').NextConfig} */
-// const nextConfig = {
-//   basePath: "/index",
-//   output: "export",  // <=== enables static exports
-//   reactStrictMode: true,
-// };
-
-// module.exports = nextConfig;

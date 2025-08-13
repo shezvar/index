@@ -69,6 +69,12 @@ const toolsLogoData = [
     alt: "V0 Icon",
     text: "V0",
   },
+  {
+    id: 12,
+    src: "/assets/tools/windsurf.svg",
+    alt: "Windsurf Icon",
+    text: "Windsurf",
+  },
 ];
 
 // Define props for the ToolsCard component
