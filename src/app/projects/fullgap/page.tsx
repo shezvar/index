@@ -97,6 +97,7 @@ export default function FullGap() {
             </Card>
           </div>
         </section>
+
         {/* 1. Introduction — Setting the Stage */}
         <section className="border-x border-stone-200 w-full px-6 lg:px-56 pt-16 pb-12 flex flex-col gap-8 h-min justify-center max-w-6xl mx-auto relative">
           <div className="w-full flex flex-col gap-8">
@@ -394,107 +395,6 @@ export default function FullGap() {
               </Blockquote>
             </div>
           </div>
-        </section>
-
-        <Divider />
-
-        <section className="border-x border-stone-200 w-full px-6 py-16 flex flex-col gap-0 h-min justify-center max-w-6xl mx-auto relative">
-          <div className="flex flex-col gap-6 w-full lg:px-48">
-            <div className="flex flex-col">
-              <SectionHeading level={1}>
-                Research & Insights —{" "}
-                <span className="text-stone-400">
-                  Listening Before Designing
-                </span>
-              </SectionHeading>
-              <div className="mt-6">
-                <SectionHeading level={2}>Methods Used:</SectionHeading>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
-                  <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
-                    <h6 className="font-semibold text-blue-900">
-                      User Interviews
-                    </h6>
-                    <p className="text-sm text-blue-700 mb-0">
-                      (freelancers & small businesses)
-                    </p>
-                  </div>
-                  <div className="bg-purple-50 p-4 rounded-lg border border-purple-200">
-                    <h6 className="font-semibold text-purple-900">
-                      SUS Questionnaires
-                    </h6>
-                    <p className="text-sm text-purple-700 mb-0">
-                      for usability scoring
-                    </p>
-                  </div>
-                  <div className="bg-green-50 p-4 rounded-lg border border-green-200">
-                    <h6 className="font-semibold text-green-900">
-                      Competitor Benchmarking
-                    </h6>
-                    <p className="text-sm text-green-700 mb-0">
-                      (Trello, Asana, Notion, Bonsai)
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="flex flex-col gap-6 w-full lg:px-48">
-            <div className="bg-purple-50 p-6 rounded-xl border border-purple-200">
-              <h5 className="font-semibold mb-4 text-base">
-                SUS Questionnaires
-              </h5>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <Card variant="default" padding="sm" className="rotate-[-2deg]">
-                  <span className="text-sm font-medium text-gray-600">
-                    I found the system unnecessarily complex
-                  </span>
-                </Card>
-                <Card variant="default" padding="sm" className="rotate-[1deg]">
-                  <span className="text-sm font-medium text-gray-600">
-                    I thought the system was easy to use
-                  </span>
-                </Card>
-                <Card variant="default" padding="sm" className="rotate-[3deg]">
-                  <span className="text-sm font-medium text-gray-600">
-                    I would need technical support to use this system
-                  </span>
-                </Card>
-                <Card variant="default" padding="sm" className="rotate-[-1deg]">
-                  <span className="text-sm font-medium text-gray-600">
-                    I found the various functions well integrated
-                  </span>
-                </Card>
-                <Card variant="default" padding="sm" className="rotate-[2deg]">
-                  <span className="text-sm font-medium text-gray-600">
-                    I thought there was too much inconsistency
-                  </span>
-                </Card>
-                <Card variant="default" padding="sm" className="rotate-[-3deg]">
-                  <span className="text-sm font-medium text-gray-600">
-                    Most people would learn to use this quickly
-                  </span>
-                </Card>
-                <Card variant="default" padding="sm" className="rotate-[1deg]">
-                  <span className="text-sm font-medium text-gray-600">
-                    I found the system very cumbersome to use
-                  </span>
-                </Card>
-                <Card variant="default" padding="sm" className="rotate-[-2deg]">
-                  <span className="text-sm font-medium text-gray-600">
-                    I felt very confident using the system
-                  </span>
-                </Card>
-                <Card variant="default" padding="sm" className="rotate-[3deg]">
-                  <span className="text-sm font-medium text-gray-600">
-                    I needed to learn a lot before using this
-                  </span>
-                </Card>
-              </div>
-            </div>
-          </div>
-
-          <KeyFindings title="Key Findings" items={keyFindings} />
         </section>
 
         <Divider />
