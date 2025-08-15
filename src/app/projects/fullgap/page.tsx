@@ -125,18 +125,7 @@ export default function FullGap() {
 
             <div className="my-12">
               <Image
-                src="/assets/fullgap/researchFlow.svg"
-                alt="Project Creation"
-                width={1600}
-                height={400}
-                quality={100}
-                fetchPriority="high"
-              />
-            </div>
-
-            <div className="my-24">
-              <Image
-                src="/assets/fullgap/researchProblemSolution.svg"
+                src="/assets/fullgap/fg-process-flow.svg"
                 alt="Project Creation"
                 width={1600}
                 height={400}

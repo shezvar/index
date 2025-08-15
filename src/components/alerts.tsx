@@ -27,7 +27,7 @@ export default function ImageAlert() {
                     </div>
                     <div className="grow">
                         <h4 id="hs-pro-shchal-label" className="font-semibold text-orange-700">
-                            Performance Note
+                            Performance Notice
                         </h4>
                         <p className="mt-1 text-sm text-gray-800">
                             Images are not yet optimised and may be slow to load. Performance improvements are on the way!

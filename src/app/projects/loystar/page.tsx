@@ -6,6 +6,7 @@ import { BgPattern } from "@/components/bgPattern";
 import { SingleImageView } from "@/components/singleImageViewer";
 import ProjectLayout from "../ProjectLayout";
 import { KeyFindings } from "@/components/KeyFindings";
+import Image from "next/image";
 
 export default function Loystar() {
   const findings = [
@@ -190,6 +191,17 @@ export default function Loystar() {
               </p>
             </div>
           </div>
+
+          <div className="my-12">
+              <Image
+                src="/assets/loystar/ls-key-findings-Container.svg"
+                alt="Project Creation"
+                width={1600}
+                height={400}
+                quality={100}
+                fetchPriority="high"
+              />
+            </div>
 
           <KeyFindings title="Key Findings" items={findings} />
         </section>

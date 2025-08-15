@@ -20,7 +20,7 @@ const nextConfig: NextConfig = {
 
     // If you load from a CMS/CDN, allow it here
     remotePatterns: [
-      // { protocol: "https", hostname: "images.unsplash.com" },
+      { protocol: "https", hostname: "images.unsplash.com" },
       // { protocol: "https", hostname: "your-cms.example.com" },
     ],
 
