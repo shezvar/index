@@ -3,7 +3,6 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
   // DO NOT static-export on Vercel; keep SSR/SSG so Image Optimization works
   // output: 'export',    <-- remove this
   // distDir: 'dist',     <-- optional; Vercel doesn't need it
@@ -15,8 +14,8 @@ const nextConfig: NextConfig = {
     formats: ["image/avif", "image/webp"],
 
     // Trim sizes to what your layout actually needs
-    deviceSizes: [360, 640, 768, 1024, 1280, 1536, 1920],
-    imageSizes: [64, 128, 256, 384, 512, 768],
+    deviceSizes: [360, 640, 768, 1024, 1280],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
 
     // If you load from a CMS/CDN, allow it here
     remotePatterns: [
@@ -38,6 +37,12 @@ const nextConfig: NextConfig = {
     return [
       {
         source: "/:all*(svg|jpg|jpeg|png|gif|webp|avif|ico|ttf|otf|woff|woff2)",
+        headers: [
+          { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
+        ],
+      },
+      {
+        source: "/_next/static/(.*)",
         headers: [
           { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
         ],

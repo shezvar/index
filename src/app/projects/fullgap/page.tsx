@@ -126,50 +126,58 @@ export default function FullGap() {
           <div className="hidden grid gap-6 grid-cols-12 w-full mt-12">
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
               <SingleImageView
-                src="/assets/fullgap/fg-create.png"
+                src="/assets/fullgap/fg-create.webp"
                 alt="Project Creation"
+                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMB/ebS7N8AAAAASUVORK5CYII="
               />
             </div>
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
               <SingleImageView
-                src="/assets/fullgap/fg-pj-deets12.png"
+                src="/assets/fullgap/fg-pj-deets12.webp"
                 alt="Project Details 2"
+                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMB/ebS7N8AAAAASUVORK5CYII="
               />
             </div>
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
               <SingleImageView
-                src="/assets/fullgap/fg-pj-deets3.png"
+                src="/assets/fullgap/fg-pj-deets3.webp"
                 alt="Project Details 3"
+                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMB/ebS7N8AAAAASUVORK5CYII="
               />
             </div>
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
               <SingleImageView
-                src="/assets/fullgap/fg-inv-1.png"
+                src="/assets/fullgap/fg-inv-1.webp"
                 alt="Invoice Management 1"
+                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMB/ebS7N8AAAAASUVORK5CYII="
               />
             </div>
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
               <SingleImageView
-                src="/assets/fullgap/fg-inv-2.png"
+                src="/assets/fullgap/fg-inv-2.webp"
                 alt="Invoice Management 2"
+                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMB/ebS7N8AAAAASUVORK5CYII="
               />
             </div>
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
               <SingleImageView
-                src="/assets/fullgap/fg-inv-3.png"
+                src="/assets/fullgap/fg-inv-3.webp"
                 alt="Invoice Management 3"
+                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMB/ebS7N8AAAAASUVORK5CYII="
               />
             </div>
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
               <SingleImageView
-                src="/assets/fullgap/fg-cont-1.png"
+                src="/assets/fullgap/fg-cont-1.webp"
                 alt="Contract Management 1"
+                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMB/ebS7N8AAAAASUVORK5CYII="
               />
             </div>
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
               <SingleImageView
-                src="/assets/fullgap/fg-cont-2.png"
+                src="/assets/fullgap/fg-cont-2.webp"
                 alt="Contract Management 2"
+                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMB/ebS7N8AAAAASUVORK5CYII="
               />
             </div>
           </div>
@@ -357,11 +365,13 @@ export default function FullGap() {
 
           <div className="my-12">
             <Image
-              src="/assets/fullgap/fg-initial-concept.png"
+              src="/assets/fullgap/fg-initial-concept.webp"
               alt="Project Creation"
               width={1600}
               height={400}
               quality={100}
+              placeholder="blur"
+              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMB/ebS7N8AAAAASUVORK5CYII="
               fetchPriority="high"
             />
           </div>
@@ -375,11 +385,13 @@ export default function FullGap() {
 
           <div className="my-12">
             <Image
-              src="/assets/fullgap/fg-second-concept.png"
+              src="/assets/fullgap/fg-second-concept.webp"
               alt="Project Creation"
               width={1600}
               height={400}
               quality={100}
+              placeholder="blur"
+              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMB/ebS7N8AAAAASUVORK5CYII="
               fetchPriority="high"
             />
           </div>
@@ -503,26 +515,30 @@ export default function FullGap() {
           <div className="grid gap-6 grid-cols-12 w-full mt-12">
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
               <SingleImageView
-                src="/assets/fullgap/fg-create.png"
+                src="/assets/fullgap/fg-create.webp"
                 alt="Project Creation"
+                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMB/ebS7N8AAAAASUVORK5CYII="
               />
             </div>
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
               <SingleImageView
-                src="/assets/fullgap/fg-pj-deets-double.png"
+                src="/assets/fullgap/fg-pj-deets-double.webp"
                 alt="Project Creation"
+                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMB/ebS7N8AAAAASUVORK5CYII="
               />
             </div>
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
               <SingleImageView
-                src="/assets/fullgap/fg-pj-deets-views.png"
+                src="/assets/fullgap/fg-pj-deets-views.webp"
                 alt="Project Creation"
+                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMB/ebS7N8AAAAASUVORK5CYII="
               />
             </div>
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
               <SingleImageView
-                src="/assets/fullgap/fg-pj-deets-collab.png"
+                src="/assets/fullgap/fg-pj-deets-collab.webp"
                 alt="Project Creation"
+                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMB/ebS7N8AAAAASUVORK5CYII="
               />
             </div>
           </div>
@@ -559,20 +575,23 @@ export default function FullGap() {
           <div className="grid gap-6 grid-cols-12 w-full mt-12">
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
               <SingleImageView
-                src="/assets/fullgap/fg-inv-1.png"
+                src="/assets/fullgap/fg-inv-1.webp"
                 alt="Invoice Overview"
+                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMB/ebS7N8AAAAASUVORK5CYII="
               />
             </div>
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
               <SingleImageView
-                src="/assets/fullgap/fg-inv-2.png"
+                src="/assets/fullgap/fg-inv-2.webp"
                 alt="Invoice Details"
+                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMB/ebS7N8AAAAASUVORK5CYII="
               />
             </div>
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
               <SingleImageView
-                src="/assets/fullgap/fg-inv-3.png"
+                src="/assets/fullgap/fg-inv-3.webp"
                 alt="Invoice Creation"
+                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMB/ebS7N8AAAAASUVORK5CYII="
               />
             </div>
           </div>
@@ -610,14 +629,16 @@ export default function FullGap() {
           <div className="grid gap-6 grid-cols-12 w-full mt-12">
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
               <SingleImageView
-                src="/assets/fullgap/fg-cont-1.png"
+                src="/assets/fullgap/fg-cont-1.webp"
                 alt="Invoice Overview"
+                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMB/ebS7N8AAAAASUVORK5CYII="
               />
             </div>
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
               <SingleImageView
-                src="/assets/fullgap/fg-cont-2.png"
+                src="/assets/fullgap/fg-cont-2.webp"
                 alt="Invoice Details"
+                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMB/ebS7N8AAAAASUVORK5CYII="
               />
             </div>
           </div>

@@ -5,11 +5,10 @@ import { Footer } from "@/components/footer";
 import { HeaderMain } from "@/components/header";
 import { Analytics } from "@vercel/analytics/next"
 import { SpeedInsights } from "@vercel/speed-insights/next"
-import ImageAlert from "@/components/alerts";
 
 const manrope = Manrope({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800'], // Add more weights if needed
+  weight: ['400', '600', '800'],
   variable: '--font-manrope'
 });
 
@@ -50,9 +49,12 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
-        <Analytics />
-        <SpeedInsights />
-        <ImageAlert />
+        {process.env.NODE_ENV === 'production' && (
+          <>
+            <Analytics />
+            <SpeedInsights />
+          </>
+        )}
       </body>
     </html>
   );

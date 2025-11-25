@@ -334,32 +334,37 @@ export default function Loystar() {
           <div className="grid gap-6 grid-cols-12 w-full mt-12">
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
               <SingleImageView
-                src="/assets/loystar/lst-pos-01.png"
+                src="/assets/loystar/lst-pos-01.webp"
                 alt="Project Details 2"
+                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMB/ebS7N8AAAAASUVORK5CYII="
               />
             </div>
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
               <SingleImageView
-                src="/assets/loystar/lst-pos-02.png"
+                src="/assets/loystar/lst-pos-02.webp"
                 alt="Project Details 2"
+                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMB/ebS7N8AAAAASUVORK5CYII="
               />
             </div>
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
               <SingleImageView
-                src="/assets/loystar/lst-pos-03.png"
+                src="/assets/loystar/lst-pos-03.webp"
                 alt="Project Details 2"
+                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMB/ebS7N8AAAAASUVORK5CYII="
               />
             </div>
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
               <SingleImageView
-                src="/assets/loystar/lst-pos-04.png"
+                src="/assets/loystar/lst-pos-04.webp"
                 alt="Project Details 2"
+                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMB/ebS7N8AAAAASUVORK5CYII="
               />
             </div>
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
               <SingleImageView
-                src="/assets/loystar/lst-pos-05.png"
+                src="/assets/loystar/lst-pos-05.webp"
                 alt="Project Details 2"
+                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMB/ebS7N8AAAAASUVORK5CYII="
               />
             </div>
           </div>
@@ -385,26 +390,30 @@ export default function Loystar() {
           <div className="grid gap-6 grid-cols-12 w-full mt-12">
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
               <SingleImageView
-                src="/assets/loystar/lst-pay-01.png"
+                src="/assets/loystar/lst-pay-01.webp"
                 alt="Project Details 2"
+                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMB/ebS7N8AAAAASUVORK5CYII="
               />
             </div>
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
               <SingleImageView
-                src="/assets/loystar/lst-pay-02.png"
+                src="/assets/loystar/lst-pay-02.webp"
                 alt="Project Details 2"
+                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMB/ebS7N8AAAAASUVORK5CYII="
               />
             </div>
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
               <SingleImageView
-                src="/assets/loystar/lst-pay-03.png"
+                src="/assets/loystar/lst-pay-03.webp"
                 alt="Project Details 2"
+                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMB/ebS7N8AAAAASUVORK5CYII="
               />
             </div>
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
               <SingleImageView
-                src="/assets/loystar/lst-pay-04.png"
+                src="/assets/loystar/lst-pay-04.webp"
                 alt="Project Details 2"
+                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMB/ebS7N8AAAAASUVORK5CYII="
               />
             </div>
           </div>
@@ -424,7 +433,7 @@ export default function Loystar() {
 
           <div className="flex flex-col gap-6 w-full">
             <div className="flex flex-col">
-              <video className="rounded-3xl" controls preload="true" loop>
+              <video className="rounded-3xl" controls preload="metadata" loop poster="/assets/loystar/ls-cover.webp">
                 <source src="/assets/loystar/processes.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>

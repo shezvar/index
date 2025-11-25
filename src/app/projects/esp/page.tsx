@@ -304,22 +304,22 @@ export default function Esp() {
 
           <div className="grid gap-6 grid-cols-12 w-full mt-12">
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
-              <SingleImageView src="/assets/esp/esp-dash-01.png" alt="Project Details 2" />
+              <SingleImageView src="/assets/esp/esp-dash-01.webp" alt="Project Details 2" blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMB/ebS7N8AAAAASUVORK5CYII=" />
             </div>
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
-              <SingleImageView src="/assets/esp/esp-dash-02.png" alt="Project Details 2" />
+              <SingleImageView src="/assets/esp/esp-dash-02.webp" alt="Project Details 2" blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMB/ebS7N8AAAAASUVORK5CYII=" />
             </div>
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
-              <SingleImageView src="/assets/esp/esp-dash-03.png" alt="Project Details 2" />
+              <SingleImageView src="/assets/esp/esp-dash-03.webp" alt="Project Details 2" blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMB/ebS7N8AAAAASUVORK5CYII=" />
             </div>
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
-              <SingleImageView src="/assets/esp/esp-dash-04.png" alt="Project Details 2" />
+              <SingleImageView src="/assets/esp/esp-dash-04.webp" alt="Project Details 2" blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMB/ebS7N8AAAAASUVORK5CYII=" />
             </div>
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
-              <SingleImageView src="/assets/esp/esp-dash-05.png" alt="Project Details 2" />
+              <SingleImageView src="/assets/esp/esp-dash-05.webp" alt="Project Details 2" blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMB/ebS7N8AAAAASUVORK5CYII=" />
             </div>
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
-              <SingleImageView src="/assets/esp/esp-dash-06.png" alt="Project Details 2" />
+              <SingleImageView src="/assets/esp/esp-dash-06.webp" alt="Project Details 2" blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMB/ebS7N8AAAAASUVORK5CYII=" />
             </div>
           </div>
         </section>
@@ -338,19 +338,19 @@ export default function Esp() {
 
           <div className="grid gap-6 grid-cols-12 w-full mt-12">
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
-              <SingleImageView src="/assets/esp/esp-supp-01.png" alt="Project Details 2" />
+              <SingleImageView src="/assets/esp/esp-supp-01.webp" alt="Project Details 2" blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMB/ebS7N8AAAAASUVORK5CYII=" />
             </div>
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
-              <SingleImageView src="/assets/esp/esp-supp-02.png" alt="Project Details 2" />
+              <SingleImageView src="/assets/esp/esp-supp-02.webp" alt="Project Details 2" blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMB/ebS7N8AAAAASUVORK5CYII=" />
             </div>
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
-              <SingleImageView src="/assets/esp/esp-supp-03.png" alt="Project Details 2" />
+              <SingleImageView src="/assets/esp/esp-supp-03.webp" alt="Project Details 2" blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMB/ebS7N8AAAAASUVORK5CYII=" />
             </div>
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
-              <SingleImageView src="/assets/esp/esp-supp-04.png" alt="Project Details 2" />
+              <SingleImageView src="/assets/esp/esp-supp-04.webp" alt="Project Details 2" blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMB/ebS7N8AAAAASUVORK5CYII=" />
             </div>
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
-              <SingleImageView src="/assets/esp/esp-supp-05.png" alt="Project Details 2" />
+              <SingleImageView src="/assets/esp/esp-supp-05.webp" alt="Project Details 2" blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMB/ebS7N8AAAAASUVORK5CYII=" />
             </div>
           </div>
         </section>
@@ -369,19 +369,19 @@ export default function Esp() {
 
           <div className="grid gap-6 grid-cols-12 w-full mt-12">
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
-              <SingleImageView src="/assets/esp/esp-sett-01.png" alt="Project Details 2" />
+              <SingleImageView src="/assets/esp/esp-sett-01.webp" alt="Project Details 2" blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMB/ebS7N8AAAAASUVORK5CYII=" />
             </div>
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
-              <SingleImageView src="/assets/esp/esp-sett-02.png" alt="Project Details 2" />
+              <SingleImageView src="/assets/esp/esp-sett-02.webp" alt="Project Details 2" blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMB/ebS7N8AAAAASUVORK5CYII=" />
             </div>
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
-              <SingleImageView src="/assets/esp/esp-sett-03.png" alt="Project Details 2" />
+              <SingleImageView src="/assets/esp/esp-sett-03.webp" alt="Project Details 2" blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMB/ebS7N8AAAAASUVORK5CYII=" />
             </div>
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
-              <SingleImageView src="/assets/esp/esp-sett-04.png" alt="Project Details 2" />
+              <SingleImageView src="/assets/esp/esp-sett-04.webp" alt="Project Details 2" blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMB/ebS7N8AAAAASUVORK5CYII=" />
             </div>
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
-              <SingleImageView src="/assets/esp/esp-sett-05.png" alt="Project Details 2" />
+              <SingleImageView src="/assets/esp/esp-sett-05.webp" alt="Project Details 2" blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMB/ebS7N8AAAAASUVORK5CYII=" />
             </div>
           </div>
         </section>

@@ -273,16 +273,16 @@ export default function DtaLearner() {
 
             <div className="grid gap-6 grid-cols-12 w-full mt-12">
               <div className="w-full rounded-3xl overflow-hidden col-span-12">
-                <SingleImageView src="/assets/dtalearner/fme-nin.png" alt="Project Details 2" />
+                <SingleImageView src="/assets/dtalearner/fme-nin.webp" alt="Project Details 2" blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMB/ebS7N8AAAAASUVORK5CYII=" />
               </div>
               <div className="w-full rounded-3xl overflow-hidden col-span-12">
-                <SingleImageView src="/assets/dtalearner/fme-assess.png" alt="Project Details 2" />
+                <SingleImageView src="/assets/dtalearner/fme-assess.webp" alt="Project Details 2" blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMB/ebS7N8AAAAASUVORK5CYII=" />
               </div>
               <div className="w-full rounded-3xl overflow-hidden col-span-12">
-                <SingleImageView src="/assets/dtalearner/fme-home-1.png" alt="Project Details 2" />
+                <SingleImageView src="/assets/dtalearner/fme-home-1.webp" alt="Project Details 2" blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMB/ebS7N8AAAAASUVORK5CYII=" />
               </div>
               <div className="w-full rounded-3xl overflow-hidden col-span-12">
-                <SingleImageView src="/assets/dtalearner/fme-home-2.png" alt="Project Details 2" />
+                <SingleImageView src="/assets/dtalearner/fme-home-2.webp" alt="Project Details 2" blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMB/ebS7N8AAAAASUVORK5CYII=" />
               </div>
             </div>
           </section>
@@ -301,19 +301,19 @@ export default function DtaLearner() {
 
             <div className="grid gap-6 grid-cols-12 w-full mt-12">
               <div className="w-full rounded-3xl overflow-hidden col-span-12">
-                <SingleImageView src="/assets/dtalearner/fme-learner-session-01.png" alt="Project Details 2" />
+                <SingleImageView src="/assets/dtalearner/fme-learner-session-01.webp" alt="Project Details 2" blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMB/ebS7N8AAAAASUVORK5CYII=" />
               </div>
               <div className="w-full rounded-3xl overflow-hidden col-span-12">
-                <SingleImageView src="/assets/dtalearner/fme-learner-session-02.png" alt="Project Details 2" />
+                <SingleImageView src="/assets/dtalearner/fme-learner-session-02.webp" alt="Project Details 2" blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMB/ebS7N8AAAAASUVORK5CYII=" />
               </div>
               <div className="w-full rounded-3xl overflow-hidden col-span-12">
-                <SingleImageView src="/assets/dtalearner/fme-learner-support-01.png" alt="Project Details 2" />
+                <SingleImageView src="/assets/dtalearner/fme-learner-support-01.webp" alt="Project Details 2" blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMB/ebS7N8AAAAASUVORK5CYII=" />
               </div>
               <div className="w-full rounded-3xl overflow-hidden col-span-12">
-                <SingleImageView src="/assets/dtalearner/fme-learner-support-02.png" alt="Project Details 2" />
+                <SingleImageView src="/assets/dtalearner/fme-learner-support-02.webp" alt="Project Details 2" blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMB/ebS7N8AAAAASUVORK5CYII=" />
               </div>
               <div className="w-full rounded-3xl overflow-hidden col-span-12">
-                <SingleImageView src="/assets/dtalearner/fme-learner-support-03.png" alt="Project Details 2" />
+                <SingleImageView src="/assets/dtalearner/fme-learner-support-03.webp" alt="Project Details 2" blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMB/ebS7N8AAAAASUVORK5CYII=" />
               </div>
             </div>
           </section>
@@ -336,16 +336,16 @@ export default function DtaLearner() {
 
             <div className="grid gap-6 grid-cols-12 w-full mt-12">
               <div className="w-full rounded-3xl overflow-hidden col-span-12">
-                <SingleImageView src="/assets/dtalearner/fme-learner-01.png" alt="Project Details 2" />
+                <SingleImageView src="/assets/dtalearner/fme-learner-01.webp" alt="Project Details 2" blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMB/ebS7N8AAAAASUVORK5CYII=" />
               </div>
               <div className="w-full rounded-3xl overflow-hidden col-span-12">
-                <SingleImageView src="/assets/dtalearner/fme-learner-02.png" alt="Project Details 2" />
+                <SingleImageView src="/assets/dtalearner/fme-learner-02.webp" alt="Project Details 2" blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMB/ebS7N8AAAAASUVORK5YII=" />
               </div>
               <div className="w-full rounded-3xl overflow-hidden col-span-12">
-                <SingleImageView src="/assets/dtalearner/fme-learner-03.png" alt="Project Details 2" />
+                <SingleImageView src="/assets/dtalearner/fme-learner-03.webp" alt="Project Details 2" blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMB/ebS7N8AAAAASUVORK5CYII=" />
               </div>
               <div className="w-full rounded-3xl overflow-hidden col-span-12">
-                <SingleImageView src="/assets/dtalearner/fme-learner-04.png" alt="Project Details 2" />
+                <SingleImageView src="/assets/dtalearner/fme-learner-04.webp" alt="Project Details 2" blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMB/ebS7N8AAAAASUVORK5CYII=" />
               </div>
             </div>
           </section>

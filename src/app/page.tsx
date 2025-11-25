@@ -15,7 +15,11 @@ import { BgPattern } from "@/components/bgPattern";
 import { FooterCTA } from "@/components/footerCTA";
 import portfolioData from "@/app/data/project.json";
 import { Button } from "@/components/buttons";
-import { ToolsDrawer } from "@/components/toolsDrawer";
+import dynamic from "next/dynamic";
+const ToolsDrawer = dynamic(
+  () => import("@/components/toolsDrawer").then((m) => m.ToolsDrawer),
+  { ssr: false }
+);
 import { ToolsCard } from "@/components/toolsLogo";
 
 export default function Home() {
@@ -33,23 +37,6 @@ export default function Home() {
         {/* HERO SECTION */}
         <section className="border-x border-stone-200 w-full px-3 py-16 flex flex-col gap-0 h-min items-center justify-center max-w-6xl mx-auto relative group/sideCard">
           <div className="flex relative items-baseline">
-            <Card
-              variant="default"
-              padding="none"
-              className="flex flex-row justify-start p-1 shadow-xl bg-white/30 backdrop-blur-md border border-white/20 -rotate-6 absolute -left-3 bottom-0 group-hover/sideCard:-rotate-12 transition-transform duration-300 ease-in-out"
-            >
-              <div className="rounded-xl overflow-hidden flex items-center justify-center bg-stone-950 size-32">
-                <Image
-                  src="/assets/hero-image.png"
-                  alt="Segun Oroyo"
-                  width={400}
-                  height={400}
-                  priority
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  className="rounded-full object-cover ml-auto"
-                />
-              </div>
-            </Card>
 
             <Card
               variant="default"
@@ -58,34 +45,22 @@ export default function Home() {
             >
               <div className="rounded-xl overflow-hidden flex items-center justify-center bg-stone-950 size-40">
                 <Image
-                  src="/assets/hero-image.png"
+                  src="/assets/hero-image.webp"
                   alt="Segun Oroyo"
                   width={400}
                   height={400}
-                  loading="lazy"
+                  quality={70}
+                  decoding="async"
+                  fetchPriority="high"
+                  priority
+                  placeholder="blur"
+                  blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGMAAQAABQABDQottAAAAABJRU5ErkJggg=="
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="rounded-full object-cover ml-auto"
                 />
               </div>
             </Card>
 
-            <Card
-              variant="default"
-              padding="none"
-              className="flex flex-row justify-start  p-1 shadow-xl bg-white/30 backdrop-blur-md border border-white/20 rotate-6 absolute -right-3 bottom-0 group-hover/sideCard:rotate-12 transition-transform duration-300 ease-in-out"
-            >
-              <div className="rounded-xl overflow-hidden flex items-center justify-center bg-stone-950 size-32">
-                <Image
-                  src="/assets/hero-image.png"
-                  alt="Segun Oroyo"
-                  width={400}
-                  height={400}
-                  loading="lazy"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  className="rounded-full object-cover ml-auto"
-                />
-              </div>
-            </Card>
           </div>
 
           <div className="text-center max-w-2xl mt-12">
@@ -159,7 +134,7 @@ export default function Home() {
         <Divider />
 
         {/* SELECTED PROJECTS SECTION */}
-        <section className="border-x border-stone-200 w-full px-6 md:px-16 py-16 flex flex-row gap-0 h-min justify-center max-w-6xl mx-auto relative">
+        <section className="border-x border-stone-200 w-full px-6 md:px-16 py-16 flex flex-row gap-0 h-min justify-center max-w-6xl mx-auto relative content-visibility-auto">
           <div className="w-full flex flex-col relative">
             <div className="max-w-3xl flex flex-col gap-2 mb-8">
               <h2 className="text-3xl md:text-4xl font-thin text-stone-400">
@@ -205,7 +180,7 @@ export default function Home() {
         <Divider />
 
         {/* TOOLS SECTION */}
-        <section className="border-x border-y border-stone-200 w-full px-6 md:px-16 py-0 flex flex-row gap-0 h-min justify-center max-w-6xl mx-auto relative">
+        <section className="border-x border-y border-stone-200 w-full px-6 md:px-16 py-0 flex flex-row gap-0 h-min justify-center max-w-6xl mx-auto relative content-visibility-auto">
           <BgPattern />
           <div className="z-[1] bg-main w-full max-w-6xl mx-auto px-6 md:px-16 py-16 border-x">
             <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-8 z-[1]">

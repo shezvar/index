@@ -103,7 +103,7 @@ export function ToolsCard({ icons = toolsLogoData, selectedIds }: ToolsCardProps
           height={48}
           className="object-contain h-8 w-8 transition-transform duration-300 hover:scale-110"
           loading="lazy"
-          quality={100}
+          quality={80}
           draggable="false"
           fetchPriority="low"
         />

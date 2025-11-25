@@ -70,10 +70,10 @@ export function SingleImageView({
             alt={alt}
             fill
             className="object-cover transition-transform duration-300 group-hover:scale-[1.02]"
-            sizes="100vw"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 1152px"
             placeholder={blurDataURL ? "blur" : "empty"}
             blurDataURL={blurDataURL}
-            quality={90}
+            quality={70}
             loading="lazy"
             decoding="async"
             priority={false}
@@ -117,8 +117,8 @@ export function SingleImageView({
                 fetchPriority="high"
                 loading="eager"
                 decoding="async"
-                quality={100}
-                sizes="100vw"
+                quality={85}
+                sizes="(max-width: 640px) 100vw, (max-width: 1280px) 90vw, 1152px"
                 placeholder={blurDataURL ? "blur" : "empty"}
                 blurDataURL={blurDataURL}
               />

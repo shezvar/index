@@ -249,8 +249,9 @@ export default function Prowoks() {
               alt="Project Creation"
               width={1600}
               height={400}
-              quality={100}
-              fetchPriority="high"
+              quality={75}
+              loading="lazy"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 1152px"
             />
           </div>
 
@@ -265,8 +266,9 @@ export default function Prowoks() {
               alt="Project Creation"
               width={1600}
               height={400}
-              quality={100}
-              fetchPriority="high"
+              quality={75}
+              loading="lazy"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 1152px"
             />
           </div>
 
@@ -299,12 +301,13 @@ export default function Prowoks() {
 
           <div className="my-12">
             <Image
-              src="/assets/prowoks/"
+              src="/assets/prowoks/processFlow.svg"
               alt="Initial Concept"
               width={1600}
               height={400}
-              quality={100}
-              fetchPriority="high"
+              quality={75}
+              loading="lazy"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 1152px"
             />
           </div>
 
@@ -317,12 +320,13 @@ export default function Prowoks() {
 
           <div className="my-12">
             <Image
-              src="/assets/prowoks/"
+              src="/assets/prowoks/flowChart.svg"
               alt="Refined Approach"
               width={1600}
               height={400}
-              quality={100}
-              fetchPriority="high"
+              quality={75}
+              loading="lazy"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 1152px"
             />
           </div>
 
@@ -475,10 +479,10 @@ export default function Prowoks() {
 
           <div className="grid gap-6 grid-cols-12 w-full mt-12">
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
-              <SingleImageView src="/assets/prowoks/pw-wk-1.png" alt="Project Creation" />
+            <SingleImageView src="/assets/prowoks/pw-wk-1.webp" alt="Project Creation" blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGMAAQAABQABDQottAAAAABJRU5ErkJggg==" />
             </div>
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
-              <SingleImageView src="/assets/prowoks/pw-wk-2.png" alt="Project Details 2" />
+            <SingleImageView src="/assets/prowoks/pw-wk-2.webp" alt="Project Details 2" blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGMAAQAABQABDQottAAAAABJRU5ErkJggg==" />
             </div>
           </div>
         </section>
@@ -501,22 +505,22 @@ export default function Prowoks() {
 
           <div className="grid gap-6 grid-cols-12 w-full mt-12">
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
-              <SingleImageView src="/assets/prowoks/pw-rc-1.png" alt="Project Details 2" />
+            <SingleImageView src="/assets/prowoks/pw-rc-1.webp" alt="Project Details 2" blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGMAAQAABQABDQottAAAAABJRU5ErkJggg==" />
             </div>
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
-              <SingleImageView src="/assets/prowoks/pw-rc-2.png" alt="Project Details 2" />
+            <SingleImageView src="/assets/prowoks/pw-rc-2.webp" alt="Project Details 2" blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGMAAQAABQABDQottAAAAABJRU5ErkJggg==" />
             </div>
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
-              <SingleImageView src="/assets/prowoks/pw-rc-3.png" alt="Project Details 2" />
+            <SingleImageView src="/assets/prowoks/pw-rc-3.webp" alt="Project Details 2" blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGMAAQAABQABDQottAAAAABJRU5ErkJggg==" />
             </div>
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
-              <SingleImageView src="/assets/prowoks/pw-rc-4.png" alt="Project Details 2" />
+            <SingleImageView src="/assets/prowoks/pw-rc-4.webp" alt="Project Details 2" blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGMAAQAABQABDQottAAAAABJRU5ErkJggg==" />
             </div>
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
-              <SingleImageView src="/assets/prowoks/pw-rc-5.png" alt="Project Details 2" />
+            <SingleImageView src="/assets/prowoks/pw-rc-5.webp" alt="Project Details 2" blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGMAAQAABQABDQottAAAAABJRU5ErkJggg==" />
             </div>
             <div className="w-full rounded-3xl overflow-hidden col-span-12">
-              <SingleImageView src="/assets/prowoks/pw-rc-6.png" alt="Project Details 2" />
+            <SingleImageView src="/assets/prowoks/pw-rc-6.webp" alt="Project Details 2" blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGMAAQAABQABDQottAAAAABJRU5ErkJggg==" />
             </div>
           </div>
         </section>
